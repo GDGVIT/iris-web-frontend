@@ -44,7 +44,7 @@ npm start
 
 <td>
 
-Nirmit Jatana <br> aka N0x_c0dx
+Nirmit Jatana <br> aka. N0x_c0dx
 
 <p align="center">
 <img src = "https://dscvit.com/images/techteam/nirmit.jpeg" width="150" height="150" alt="Nirmit Jatana">
