@@ -9,7 +9,6 @@
 ---
 [![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
   [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](https://github.com/Nirmitjatana/wikiweb-frontend)
-[![GitHub commit activity the past week, 4 weeks](https://img.shields.io/github/commit-activity/y/eslint/eslint.svg?style=flat)](https://github.com/Nirmitjatana/wikiweb-frontend)
 [![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]()
 [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Nirmitjatana/)
 
