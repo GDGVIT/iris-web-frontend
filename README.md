@@ -2,39 +2,38 @@
 <a href="https://dscvit.com">
 	<img src="https://user-images.githubusercontent.com/30529572/72455010-fb38d400-37e7-11ea-9c1e-8cdeb5f5906e.png" />
 </a>
-	<h2 align="center"> < Insert Project Title Here > </h2>
-	<h4 align="center"> < Insert Project Description Here > <h4>
+	<h2 align="center">Wiki-web</h2>
+	<h4 align="center"> Wiki web is a web-application in which you can enter a search term or a wiki URL and a depth, it will hop those depths and give you a result of all search items you get to. You can also enter two search terms and view the number of hops between them.<h4>
 </p>
 
 ---
 [![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
-  [![UI ](https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor)](INSERT_UI_LINK_HERE)
+  [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](https://github.com/Nirmitjatana/wikiweb-frontend)
+[![Open Source](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]()
+[![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Nirmitjatana/)
 
 
 ## Functionalities
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
-- [ ]  < insert functionality >
+- [ ]  Web app for wiki surfers
+- [ ]  Freedom to enter search terms, wiki URL and even depth of search
+- [ ]  data visualization
+- [ ]  compare two search terms
+- [ ]  get shortest path.
 
 <br>
 
 
 ## Instructions to run
 
-* Pre-requisites:
-	-  < insert pre-requisite >
-	-  < insert pre-requisite >
-
 * < directions to install > 
 ```bash
-< insert code >
+Clone repo
 ```
 
 * < directions to execute >
 
 ```bash
-< insert code >
+npm start
 ```
 
 ## Contributors
@@ -45,14 +44,14 @@
 
 <td>
 
-John Doe
+Nirmit Jatana <br> aka. N0x_c0dx
 
 <p align="center">
-<img src = "https://dscvit.com/images/dsc-logo-square.svg" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "https://dscvit.com/images/techteam/nirmit.jpeg" width="150" height="150" alt="Nirmit Jatana">
 </p>
 <p align="center">
-<a href = "https://github.com/person1"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
-<a href = "https://www.linkedin.com/in/person1">
+<a href = "https://github.com/Nirmitjatana"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
+<a href = "https://www.linkedin.com/in/nirmit-jatana-6814a4188/">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
@@ -61,35 +60,19 @@ John Doe
 
 <td>
 
-John Doe
-
+Md Hishaam Akhtar
+<br><br>
 <p align="center">
-<img src = "https://dscvit.com/images/dsc-logo-square.svg" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
+<img src = "https://dscvit.com/images/techteam/hishaam.jpg" width="150" height="150" alt="Hishaam">
 </p>
 <p align="center">
-<a href = "https://github.com/person2"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
-<a href = "https://www.linkedin.com/in/person2">
+<a href = "https://github.com/mdhishaamakhtar"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
+<a href = "https://www.linkedin.com/in/md-hishaam-akhtar-812a3019a/">
 <img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
 </a>
 </p>
 </td>
 
-
-
-<td>
-
-John Doe
-
-<p align="center">
-<img src = "https://dscvit.com/images/dsc-logo-square.svg" width="150" height="150" alt="Your Name Here (Insert Your Image Link In Src">
-</p>
-<p align="center">
-<a href = "https://github.com/person3"><img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36"/></a>
-<a href = "https://www.linkedin.com/in/person3">
-<img src = "http://www.iconninja.com/files/863/607/751/network-linkedin-social-connection-circular-circle-media-icon.svg" width="36" height="36"/>
-</a>
-</p>
-</td>
 </tr>
   </table>
 
