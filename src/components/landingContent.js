@@ -1,22 +1,30 @@
 import React from 'react';
 import '../App.css';
-import { Button } from "antd";
-import { Layout, Menu } from 'antd';
+// import { withStyles, makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import point from '../Assets/points.png';
+// import { purple } from '@material-ui/core/colors';
 
-const { Header } = Layout;
+// const ColorButton = withStyles((theme) => ({
+//   root: {
+//     color: theme.palette.getContrastText(purple[500]),
+//     backgroundColor: purple[500],
+//     '&:hover': {
+//       backgroundColor: purple[700],
+//     },
+//   },
+// }))(Button);
 
-function landingContent() {  
+// const useStyles = makeStyles((theme) => ({
+//   margin: {
+//     margin: theme.spacing(1000),
+//   },
+// }));
+
+// const classes = useStyles();
+export default function landingContent() {  
   return (
     <div className="App">
-      <Layout className="layout">
-    <Header>
-      <div className="logo" />
-      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-        <Menu.Item key="1">nav 1</Menu.Item>
-        <Menu.Item key="2">nav 2</Menu.Item>
-        <Menu.Item key="3">nav 3</Menu.Item>
-      </Menu>
-    </Header>
         <h1>
           Introducing you,<br/>to the <span style={{color:"#22d46c"}}>efficient</span> way for web hoping!
         </h1>
@@ -34,12 +42,18 @@ function landingContent() {
           Irure adipisicing dolore commodo Lorem fugiat magna minim in. Commodo consectetur ullamco nostrud veniam consequat et duis veniam occaecat amet ullamco mollit. Nisi minim
         </h4>
         <br/>
-        <Button type="primary" style={{ padding:"10px 35px", backgroundColor:"#22d46c" , borderStyle:"solid",borderColor:"#22d46c", color:"white", fontWeight:"500" , fontFamily:"montserrat"}}>
-      Start hoping!
-    </Button>
-    </Layout>
+        <Button variant="contained" color="primary" text="primary">
+        Start Hoping!
+      </Button>
+      <br/>
+      <br/>
+      <br/>
+      <h1>Features</h1>
+      <h4 style={{color:"grey"}}>Qui enim est non irure dolore ut deserunt do esse enim.</h4>
+      <br/>
+      <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block", marginLeft: "40px"}}>Allow users to get the shortest path</h3><br/>
+      <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block" , marginLeft: "40px"}}>Allow users to adjust depth</h3><br/>
+      <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block" , marginLeft: "40px"}}>Number hops between two items</h3>
     </div>
   );
 }
-
-export default landingContent;
