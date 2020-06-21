@@ -1,9 +1,7 @@
 .App {
-  position: absolute;
-  min-height: 100vh;
-  
   color: white;
   padding-left:40px;
+  font-family: montserrat;
 }
 .App-link {
   color: #61dafb;
@@ -26,4 +24,18 @@ a{
   background: rgba(255, 255, 255, 0.2);
   margin: 16px 24px 16px 0;
   float: left;
+}
+.logo{
+  width:160px;
+  margin-left:30px;
+  padding-top:20px; 
+}
+@media (max-width: 768px){
+  .logo{
+    margin-bottom:15px;
+    /* display:none; */
+  }
+  .App {
+    padding-left:25px;
+  }
 }
