@@ -65,6 +65,38 @@ export default function landingContent() {
         </Grid>
         <Grid item xs={10}>
           <h3 style={{display: "inline-block"}} className="mobile-text">Allow users to get the shortest path</h3>
+        </Grid>
+        </Grid>
+
+        <Grid
+  container
+  direction="row"
+  justify="flex-start"
+  alignItems="center"
+><Grid item xs={1}>
+          <img src={point} alt="feature-icon" className="feature"/>
+        </Grid>
+        <Grid item xs={10}>
+          <h3 style={{display: "inline-block"}} className="mobile-text">Allow users to adjust depth</h3>
+        </Grid>
+        </Grid>
+
+        <Grid
+  container
+  direction="row"
+  justify="flex-start"
+  alignItems="center"
+><Grid item xs={1}>
+          <img src={point} alt="feature-icon" className="feature"/>
+        </Grid>
+        <Grid item xs={10}>
+          <h3 style={{display: "inline-block"}} className="mobile-text">Number hops between two items</h3>
+        </Grid>
+        </Grid>
+      <Grid/>
+      {/* <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block", marginLeft: "40px"}}>Allow users to get the shortest path</h3><br/> */}
+      {/* <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block" , marginLeft: "40px"}}>Allow users to adjust depth</h3><br/>
+      <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block" , marginLeft: "40px"}}>Number hops between two items</h3> */}
     </div>
   );
 }
