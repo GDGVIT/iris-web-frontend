@@ -2,7 +2,11 @@ import React from 'react';
 import '../App.css';
 // import { withStyles, makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+// import Grid from './grid.js'
 import point from '../Assets/points.png';
+// import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import '../App.css';
 // import { purple } from '@material-ui/core/colors';
 
 // const ColorButton = withStyles((theme) => ({
@@ -51,9 +55,16 @@ export default function landingContent() {
       <h1>Features</h1>
       <h4 style={{color:"grey"}}>Qui enim est non irure dolore ut deserunt do esse enim.</h4>
       <br/>
-      <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block", marginLeft: "40px"}}>Allow users to get the shortest path</h3><br/>
-      <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block" , marginLeft: "40px"}}>Allow users to adjust depth</h3><br/>
-      <img src={point} alt="feature-icon"/><h3 style={{display: "inline-block" , marginLeft: "40px"}}>Number hops between two items</h3>
+      <Grid
+  container
+  direction="row"
+  justify="flex-start"
+  alignItems="center"
+><Grid item xs={1}>
+          <img src={point} alt="feature-icon" className="feature"/>
+        </Grid>
+        <Grid item xs={10}>
+          <h3 style={{display: "inline-block"}} className="mobile-text">Allow users to get the shortest path</h3>
     </div>
   );
 }
