@@ -11,6 +11,7 @@ import Box from '@material-ui/core/Box';
 import App from './landingContent'
 import '../App.css';
 import logo from '../Assets/logo.png';
+import Searchbox from './search.js';
 
 
 
@@ -98,32 +99,8 @@ export default function FullWidthTabs() {
         <TabPanel value={value} index={0}  >
         <App/>
         </TabPanel>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
-          Item Two
+        <TabPanel value={value} index={1} dir={theme.direction} id="searcher">
+          <Searchbox />
 
         </TabPanel>
         

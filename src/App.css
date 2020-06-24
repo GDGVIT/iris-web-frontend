@@ -1,5 +1,6 @@
 .App {
   color: white;
+  /* background-color: #303030; */
   padding-left:40px;
   font-family: montserrat;
 }
@@ -16,7 +17,7 @@ a{
 }
 .button{
   color:white;
-  background-color:  #22d46c;
+  background-color:  #22d46c65;
 }
 #components-layout-demo-top .logo {
   width: 120px;
@@ -35,7 +36,30 @@ a{
   /* font-size: 16px; */
   margin-left:-12px;
 }
-
+/* .input{
+  background-color: #303030;
+  border-style: solid;
+  border-color: white;
+  color: white;
+  height:5vw;
+  width:50vw;
+  font-size: 30px;
+  padding-left:10px;
+}
+.input .active {
+  border-color: #22d46c;
+} */
+/* .box{
+  background-color:grey;
+  border-radius:15px;
+  width:70vw;
+  height:400px;
+  margin:40px auto;
+}
+.search{
+  border-color: white;
+  margin:40px;
+} */
 @media (max-width: 768px){
   .logo{
     margin-bottom:15px;
@@ -53,4 +77,15 @@ a{
     font-size: 16px;
     margin-left:6px;
   }
+  /* .input{
+    background-color: #303030;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    height:10vh;
+    width:80vw;
+    font-size: 30px;
+    padding-left:10px;
+    outline: #22d46c;
+  } */
 }
