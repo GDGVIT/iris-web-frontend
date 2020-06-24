@@ -36,6 +36,8 @@ class landingContent extends React.Component {
           {/* <Button variant="contained" color="primary" text="primary">
           Start Hoping!
         </Button> */}
+        <br/>
+        <br/>
         <h1>Features</h1>
         <h4 style={{color:"grey"}}>Qui enim est non irure dolore ut </h4>
         <br/>

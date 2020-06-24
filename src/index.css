@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: montserrat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -35,9 +33,9 @@ background-color: #23292F;
   margin-top:-250px; */
   /* clip-path: circle(150% at 100% 0%); */
 }
-/* .content{
+.content{
   padding-left:20px;
-} */
+}
 a{
   color:#22d46c;
   text-decoration: none;
