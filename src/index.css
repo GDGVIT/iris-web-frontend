@@ -82,7 +82,7 @@ button{
 }
 .feature-grid{
   display: grid;
-  grid-template-columns: 50px 150px;
+  grid-template-columns: 50px auto;
 }
 /* .content > .mode-icon{
   width:30px;
