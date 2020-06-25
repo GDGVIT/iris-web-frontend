@@ -39,7 +39,7 @@ function App() {
       <Content mode={JSON.parse(localStorage.getItem('dark'))}/>
       <div className="feature-grid">
           <img src={Points} alt="point-icon" style={{paddingLeft:"20px"}}/>
-          <h4 style={{paddingLeft:"20px"}}>We have <span onClick={() => setDarkMode(prevMode => !prevMode)} className="mode-button">{darkMode ? "light mode" : "dark mode"}</span> for you </h4>
+          <h5 style={{paddingLeft:"20px"}}>We have <span onClick={() => setDarkMode(prevMode => !prevMode)} className="mode-button">{darkMode ? "light mode" : "dark mode"}</span> for you </h5>
         </div>
 
     {/* <img src={bottom} alt="bottom" className="bottom"/> */}

@@ -43,11 +43,11 @@ class landingContent extends React.Component {
         <br/>
         <div className="feature-grid">
           <img src={Points} alt="point-icon"/>
-          <h4>Allow users to get the shortest</h4>
+          <h5>Allow users to get the shortest</h5>
           <img src={Points} alt="point-icon"/>
-          <h4>Allow users to adjust depth</h4>
+          <h5>Allow users to adjust depth</h5>
           <img src={Points} alt="point-icon"/>
-          <h4>Number hops between two items</h4>
+          <h5>Number hops between two items</h5>
           {/* { <img src={Points} alt="point-icon"/>
           <h4>We have <button>{localStorage.getItem('dark') ? "light-mode" : "dark-mode"}</button> for you </h4> */}
         </div>

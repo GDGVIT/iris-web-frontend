@@ -230,6 +230,6 @@ button{
     width:80vw;
   }
   .feature-grid{
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 }
