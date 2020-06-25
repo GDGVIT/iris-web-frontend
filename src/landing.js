@@ -3,18 +3,24 @@ import React from 'react';
 import './index.css';
 
 import Points from './Assets/points.png' 
-// import Mode from './Assets/mode.png' 
 
 
-// React.useEffect(() => {
-//   const Mode = JSON.parse(localStorage.getItem('dark'));
-// console.log(Mode);
-// } , [])
 
-class landingContent extends React.Component {
-  render(){  
-    return (
-      <div className="content">
+
+
+
+function LandingContent() {
+  // const [darkMode, setDarkMode] = React.useState(getInitialMode())
+  // React.useEffect(() => {
+  //   localStorage.setItem('dark', JSON.stringify(darkMode));
+  // } , [darkMode])
+
+  // function getInitialMode(){
+  //   const savedMode = JSON.parse(localStorage.getItem('dark'));
+  //   return savedMode || false
+  // }
+  return (
+    <div className="content">
           <h1>
             Introducing you,<br/>to the <span style={{color:"#22d46c"}}>efficient</span> way for web hoping!
           </h1>
@@ -48,12 +54,12 @@ class landingContent extends React.Component {
           <h5>Allow users to adjust depth</h5>
           <img src={Points} alt="point-icon"/>
           <h5>Number hops between two items</h5>
-          {/* { <img src={Points} alt="point-icon"/>
-          <h4>We have <button>{localStorage.getItem('dark') ? "light-mode" : "dark-mode"}</button> for you </h4> */}
+          {/* <img src={Points} alt="point-icon" style={{paddingLeft:"20px"}}/>
+          <h5 style={{paddingLeft:"20px"}}>We have <span onClick={() => setDarkMode(prevMode => !prevMode)} className="mode-button">{darkMode ? "light mode" : "dark mode"}</span> for you </h5> */}
         </div>
         </div>
   );
 }
-}
 
-export default landingContent
+
+export default LandingContent;

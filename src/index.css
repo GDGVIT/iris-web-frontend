@@ -16,11 +16,13 @@ background-color: #23292F;
   color:white;
   min-height: 100vh;
   width:100vw;
+  transition: ease-in 0.5s;
   /* overflow: hidden; */
 }
 .light-mode{
   /* background-color: #303030; */
   color:#303030;
+  transition: ease-in 0.5s;
   /* min-height: 100vh; */
 }
 .left{
@@ -141,17 +143,17 @@ button{
   margin: 0px auto;
 }
 
-.menu__list-item {
+ .menu__list-item {
   display: inline-block;
   height: 100%;
   margin-right: 20px;
 }
 
-.menu__list-item:last-child {
+ .menu__list-item:last-child {
   margin-right: 0;
 }
 
-.menu__link {
+ .menu__link {
   color: #b6b6b6;
   font-weight: 700;
   display: inline-block;
@@ -159,16 +161,16 @@ button{
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  padding: 0 3px;
+  padding: 0px 20px;
 }
 
-.menu__link:hover {
+ .menu__link:hover {
   color: #22d46c;
 }
 
-.menu__link--active {
+ .menu__link--active {
   color: #22d46c;
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
