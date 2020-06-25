@@ -156,7 +156,7 @@ button{
 }
 
  .menu__link {
-  color: #b6b6b6;
+  color: #22d46c;
   font-weight: 700;
   display: inline-block;
   height: 100%;
@@ -168,15 +168,15 @@ button{
   padding: 0px 20px;
 }
 
- .menu__link:hover {
+ /* .menu__link:hover {
   color: #22d46c;
-}
+} */
 
- .active {
+ /* .active {
   color: #22d46c;
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
-}
+} */
 
 .menu__logo {
   text-indent: -9999999px;
