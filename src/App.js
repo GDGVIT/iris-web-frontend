@@ -25,8 +25,8 @@ function App() {
 
                     <div className="menu__right">
                         <ul className="menu__list">
-                            <li className="menu__list-item"><a className="menu__link " href="#">Home</a></li>
-                            <li className="menu__list-item"><a className="menu__link menu__link--active" href="#">Search</a></li>
+                            <li className="menu__list-item"><a className="menu__link " href={"https://dscvit.com"}>Home</a></li>
+                            <li className="menu__list-item"><a className="menu__link menu__link--active" href={"https://dscvit.com"}>Search</a></li>
                         </ul>
                     </div>
                         

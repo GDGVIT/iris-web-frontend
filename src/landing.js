@@ -2,7 +2,7 @@
 import React from 'react';
 import './index.css';
 
-import Points from './Assets/points.png' 
+// import Points from './Assets/points.png' 
 // import Mode from './Assets/mode.png' 
 
 
