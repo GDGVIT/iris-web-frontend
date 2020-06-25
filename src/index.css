@@ -57,6 +57,7 @@ button{
   width:200px;
   font-size: 18px;
   font-weight: 700;
+  transition: ease-in 0.5s;
 }
 /* .mode-button{
   color:#22d46c;
@@ -114,6 +115,7 @@ button{
   padding: 0 40px;
   position: relative;
   z-index: 999;
+
 }
 .menu {
   background-color: rgb(255, 255, 255);
@@ -170,7 +172,7 @@ button{
   color: #22d46c;
 }
 
- .menu__link--active {
+ .active {
   color: #22d46c;
   border-bottom: 4px solid #22d46c;
   font-weight: 700;

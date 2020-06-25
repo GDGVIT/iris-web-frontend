@@ -18,6 +18,22 @@ function App() {
     const savedMode = JSON.parse(localStorage.getItem('dark'));
     return savedMode || false
   }
+  function shifter(name){
+
+    // console.log(name)
+    // let ul = document.querySelector('ul');
+    // let li = document.getElementById('#changer');
+    // console.log(li)
+    
+    // li.forEach(el =>{
+    //   el.addEventListener('click',function(){
+    //     ul.querySelector('.active').classList.remove('.active');
+    
+    //     el.classList.add('.active');
+    //   })
+    // })
+  }
+ 
   return (
     <Router>
     <div className={darkMode ? "dark-mode" : "light-mode"}>
@@ -28,10 +44,10 @@ function App() {
                     <div className="menu__right">
                         <ul className="menu__list">
                           <Link to="/">
-                            <li className="menu__list-item menu__link menu__link--active">Home</li>
+                            <li className="menu__list-item menu__link active"  onClick={()=>shifter()}>Home</li>
                             </Link>
                             <Link to="/search">
-                            <li className="menu__list-item menu__link" >Search</li>
+                            <li className="menu__list-item menu__link" id="changer">Search</li>
                             </Link>
                         </ul>
                     </div>
