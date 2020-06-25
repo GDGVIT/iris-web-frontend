@@ -35,7 +35,7 @@ background-color: #23292F;
 }
 .content{
   padding-left:20px;
-  width:calc(100vw-30px);
+  /* width:calc(100vw-30px); */
 }
 a{
   color:#22d46c;
