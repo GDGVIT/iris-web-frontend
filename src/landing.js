@@ -48,11 +48,11 @@ function LandingContent() {
         <h4 style={{color:"grey"}}>Qui enim est non irure dolore ut </h4>
         <br/>
         <div className="feature-grid">
-          <img src={Points} alt="point-icon"/>
+          <img src={Points} alt="point-icon" className="point"/>
           <h5>Allow users to get the shortest</h5>
-          <img src={Points} alt="point-icon"/>
+          <img src={Points} alt="point-icon" className="point"/>
           <h5>Allow users to adjust depth</h5>
-          <img src={Points} alt="point-icon"/>
+          <img src={Points} alt="point-icon" className="point"/>
           <h5>Number hops between two items</h5>
           {/* <img src={Points} alt="point-icon" style={{paddingLeft:"20px"}}/>
           <h5 style={{paddingLeft:"20px"}}>We have <span onClick={() => setDarkMode(prevMode => !prevMode)} className="mode-button">{darkMode ? "light mode" : "dark mode"}</span> for you </h5> */}
