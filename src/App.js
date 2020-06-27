@@ -27,7 +27,7 @@ function App() {
   function getInitialTab(){
     const saver = JSON.parse(localStorage.getItem('Home'));
     console.log(saver);
-    return saver || false
+    return saver || true
   }
 // console.log(tab)
 
