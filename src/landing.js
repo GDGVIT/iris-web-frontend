@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './index.css';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import Points from './Assets/points.png' 
 
 
