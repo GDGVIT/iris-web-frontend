@@ -49,7 +49,9 @@ a{
 }
 button{
   color:white;
-  background-color:  #22d46c;
+  /* background-color:  #22d46c; */
+  color:#22d46c;
+  background-color: transparent;
   border-style: solid;
   border-color: #22d46c;
   outline: #22d46c;
@@ -57,7 +59,8 @@ button{
   width:200px;
   font-size: 18px;
   font-weight: 700;
-  transition: ease-in 0.5s;
+  box-shadow: 0px 0px 5px #22d46c;
+  transition: ease-in 0.2s;
 }
 /* .mode-button{
   color:#22d46c;
@@ -81,7 +84,7 @@ button{
             user-select: none; */
 }
  button:hover{
-  box-shadow: 0px 0px 5px #22d46c88;
+  box-shadow: 0px 0px 15px #22d46c;
 }
 .feature-grid{
   display: grid;
@@ -156,7 +159,7 @@ button{
 }
 
  .menu__link {
-  color: #22d46c;
+  color: #b6b6b6;
   font-weight: 700;
   display: inline-block;
   height: 100%;
@@ -168,15 +171,27 @@ button{
   padding: 0px 20px;
 }
 
- /* .menu__link:hover {
+ .menu__link:hover {
   color: #22d46c;
-} */
+}
 
- /* .active {
+ .active {
   color: #22d46c;
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
-} */
+  transition: ease-in-out 0.3s;
+  transform: translateX(5%);
+  /* -ms-transform-origin-x: 100%; */
+}
+
+.active2 {
+  color: #22d46c;
+  border-bottom: 4px solid #22d46c;
+  font-weight: 700;
+  transition: ease-in-out 0.3s;
+  transform: translateX(-5%);
+  /* -ms-transform-origin-x: 100%; */
+}
 
 .menu__logo {
   text-indent: -9999999px;
@@ -218,11 +233,39 @@ button{
   padding: 5px;
   font-weight: 300;
 }
-@media (max-width:1139px){
+/* .point{
+  width:30px;
+} */
+.search-box > form{
+  height:60vh;
+  border-style: solid;
+  border-color: yellow;
+  /* justify-content: center; */
+  margin:auto 260px;
+  display: flex-box;
+  /* padding: 40px; */
+  justify-content: center;
+}
+/* .search-box{
+  margin: 50px auto;
+  justify-content: center;
+} */
+@media (max-width:768px){
   .left{
   display: none;
     /* clip-path: circle(150% at 100% 0%); */
   } 
+  .search-box > form{
+    height:60vh;
+    border-style: solid;
+    border-color: yellow;
+    /* justify-content: center; */
+    margin:10px 10px;
+    text-align: center;
+    display: flex-box;
+    /* padding: 40px; */
+    justify-content: center;
+  }
   .bottom{
     display: none;
   }
