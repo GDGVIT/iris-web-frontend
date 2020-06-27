@@ -18,22 +18,20 @@ function App() {
     const savedMode = JSON.parse(localStorage.getItem('dark'));
     return savedMode || false
   }
-  function shifter(name){
 
-    // console.log(name)
-    // let ul = document.querySelector('ul');
-    // let li = document.getElementById('#changer');
-    // console.log(li)
-    
-    // li.forEach(el =>{
-    //   el.addEventListener('click',function(){
-    //     ul.querySelector('.active').classList.remove('.active');
-    
-    //     el.classList.add('.active');
-    //   })
-    // })
+  const [tab, setTab] = React.useState(getInitialTab())
+  React.useEffect(() => {
+    localStorage.setItem('Home', JSON.stringify(tab));
+  } , [tab])
+
+  function getInitialTab(){
+    const saver = JSON.parse(localStorage.getItem('Home'));
+    console.log(saver);
+    return saver || false
   }
- 
+// console.log(tab)
+
+
   return (
     <Router>
     <div className={darkMode ? "dark-mode" : "light-mode"}>
@@ -44,10 +42,10 @@ function App() {
                     <div className="menu__right">
                         <ul className="menu__list">
                           <Link to="/">
-                            <li className="menu__list-item menu__link active"  onClick={()=>shifter()}>Home</li>
+                            <li className={tab ? "menu__list-item menu__link active" : "menu__list-item menu__link"} onClick={tab ? null : () => setTab(prevMode => !prevMode) }>Home</li>
                             </Link>
                             <Link to="/search">
-                            <li className="menu__list-item menu__link" id="changer">Search</li>
+                            <li className={tab ? "menu__list-item menu__link" : "menu__list-item menu__link active2"} onClick={tab ? () => setTab(prevMode => !prevMode) : null }>Search</li>
                             </Link>
                         </ul>
                     </div>
