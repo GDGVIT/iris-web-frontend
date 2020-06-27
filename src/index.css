@@ -86,6 +86,9 @@ button{
  button:hover{
   box-shadow: 0px 0px 15px #22d46c;
 }
+ .submit:hover{
+  box-shadow: 0px 0px 15px #22d46c;
+}
 .feature-grid{
   display: grid;
   grid-template-columns: 50px auto;
@@ -238,8 +241,8 @@ button{
 } */
 .search-box > form{
   height:60vh;
-  border-style: solid;
-  border-color: yellow;
+  /* border-style: solid; */
+  /* border-color: yellow; */
   /* justify-content: center; */
   margin:auto 260px;
   display: flex-box;
@@ -250,22 +253,89 @@ button{
   margin: 50px auto;
   justify-content: center;
 } */
+.submit{
+  background-color: transparent;
+  color:white;
+  /* background-color:  #22d46c; */
+  color:#22d46c;
+  /* background-color: transparent; */
+  border-style: solid;
+  border-color: #22d46c;
+  outline: #22d46c;
+  padding:15px;
+  width:200px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0px 0px 5px #22d46c;
+  transition: ease-in 0.2s;
+  margin-top: 18px;
+}
+.inputURL{
+  background-color: transparent;
+  border-style: solid;
+  border-color: #22d46c;
+  width:90%;
+  height:7vh;
+  margin-bottom:40px;
+  color: #22d46c;
+  outline: #22d46c;
+  border-radius:6px;
+  transition: ease-in 0.5s;
+}
+.vanish{
+display: none;
+transition: ease-out 0.5s;
+
+}
+.checkbox{
+  width:25px;
+  height:25px;
+  margin:2px;
+  padding-left:30px;
+  background: #22d46c;
+  position: absolute;
+  border-color: #22d46c;
+}
+/* .compare{
+  margin-right:20px
+} */
+.dropdown{
+  background-color: transparent;
+  width: 200px;
+  height:50px;
+  border-style: solid;
+  border-color: #22d46c;
+  box-shadow: 0px 0px 5px #22d46c;
+  border-radius: 4px;
+  color: #22d46c;
+  outline: none;
+}
+.dropdown > option{
+color: black;
+}
 @media (max-width:768px){
   .left{
   display: none;
     /* clip-path: circle(150% at 100% 0%); */
   } 
   .search-box > form{
+    /* color: #22d46c; */
     height:60vh;
-    border-style: solid;
-    border-color: yellow;
+    /* border-style: solid; */
+    /* border-color: yellow; */
     /* justify-content: center; */
     margin:10px 10px;
-    text-align: center;
+    /* text-align: center; */
     display: flex-box;
     /* padding: 40px; */
     justify-content: center;
   }
+  .search-heading{
+    font-size: 21px;
+  }
+  /* .lab{
+    color: #22d46c;
+  } */
   .bottom{
     display: none;
   }
