@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './index.css';
-
+import {Link} from 'react-router-dom';
 import Points from './Assets/points.png' 
 
 
@@ -36,13 +36,18 @@ function LandingContent() {
             <br/>
             <br/>
             Irure adipisicing dolore commodo Lorem fugiat magna minim in. Commodo consectetur ullamco nostrud veniam consequat et duis veniam occaecat amet ullamco mollit. Nisi minim
+            <br/>
+            <br/>
+            Irure dolor nostrud ea proident id nulla esse laboris ad non ex duis culpa proident.
           </h4>
-          <br/>
+          {/* <br/>
+          <Link to="/search">
           <button>Start Hoping!</button>
+          </Link> */}
+          
           {/* <Button variant="contained" color="primary" text="primary">
           Start Hoping!
         </Button> */}
-        <br/>
         <br/>
         <h1>Features</h1>
         <h4 style={{color:"grey"}}>Qui enim est non irure dolore ut </h4>
