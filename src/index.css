@@ -313,6 +313,16 @@ transition: ease-out 0.5s;
 .dropdown > option{
 color: black;
 }
+.logo{
+  position: absolute;
+  padding:12px;
+  width:45px;
+  /* margin-top: 2px; */
+}
+.logo-head{
+  padding-left:65px;
+  position: absolute;
+}
 @media (max-width:768px){
   .left{
   display: none;
@@ -346,6 +356,18 @@ color: black;
   .content > h1{
     width:80vw;
   }
+  .logo{
+    display: none;
+  }
+  .logo-head{
+    display: none;
+  }
+  /* .menu{
+    height:100px
+  }
+  .darkmenu{
+    height: 100px;
+  } */
   /* .feature-grid{
     font-size: 14px;
   } */
