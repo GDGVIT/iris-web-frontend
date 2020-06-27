@@ -323,7 +323,7 @@ color: black;
   padding-left:65px;
   position: absolute;
 }
-@media (max-width:768px){
+@media (max-width:1139px){
   .left{
   display: none;
     /* clip-path: circle(150% at 100% 0%); */
