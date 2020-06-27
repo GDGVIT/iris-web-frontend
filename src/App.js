@@ -5,6 +5,7 @@ import Points from './Assets/points.png'
 import './index.css';
 import Searchbox from './searchbox';
 import { BrowserRouter as Router, Switch , Route , Link} from 'react-router-dom';
+import logo from './Assets/logo.png'
 // import Navbar from './navbar'
 // import bottom from './Assets/bottom.png'
 
@@ -37,7 +38,8 @@ function App() {
     <div className={darkMode ? "dark-mode" : "light-mode"}>
     <div className="container center">
                 <nav className={darkMode ? "darkmenu" : "menu"}>
-              
+                <img src={logo} className="logo" alt="logo"/>
+                <h3 className="logo-head">Wiki Web</h3>
 
                     <div className="menu__right">
                         <ul className="menu__list">
