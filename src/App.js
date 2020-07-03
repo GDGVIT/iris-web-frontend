@@ -4,6 +4,7 @@ import Content from './landing'
 import Points from './Assets/points.png' 
 import './index.css';
 import Searchbox from './searchbox';
+import Discover from './discover';
 import { BrowserRouter as Router, Switch , Route , Link} from 'react-router-dom';
 import logo from './Assets/logo.png'
 // import Navbar from './navbar'
@@ -72,7 +73,7 @@ function App() {
         </div>
       </Route>
       <Route path="/search" component={Searchbox}/>
-      <Route path="/discover" component={Searchbox}/>
+      <Route path="/discover" component={Discover}/>
       </Switch>
       
 
