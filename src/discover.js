@@ -26,7 +26,7 @@ function Discover() {
                 <form>
                 <label className="lab">
                     <h2 className="search-heading">Enter search term or wiki URL</h2><br/>
-                    <input type="text" name="url1" className="inputURL"/>
+                    <input type="text" name="url1" className="inputURL3"/>
                 </label>
                 {/* <h2 className="compare">Compare two terms:<span style={{color:"transparent"}}>....</span>
                 <input type="checkbox" name="Compare" className="checkbox" onClick={() => setCompare(prevMode => !prevMode)}/><br/>
