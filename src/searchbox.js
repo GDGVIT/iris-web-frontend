@@ -25,23 +25,23 @@ function Searchbox() {
             <div className="search-box">
                 <form>
                 <label className="lab">
-                    <h2 className="search-heading">Enter search term or wiki URL</h2><br/>
-                    <input type="text" name="name" className="inputURL"/>
+                    <h2 className="search-heading">Enter two search terms or wiki URLs</h2><br/>
+                    <input type="text" name="name" className="inputURL" placeholder="From"/>
                 </label>
-                <h2 className="compare">Compare two terms:<span style={{color:"transparent"}}>....</span>
+                {/* <h2 className="compare">Compare two terms:<span style={{color:"transparent"}}>....</span>
                 <input type="checkbox" name="Compare" className="checkbox" onClick={() => setCompare(prevMode => !prevMode)}/><br/>
-                </h2>
-                <input type="text" name="name" className={compare ? "inputURL" : "vanish"}/>
+                </h2> */}
+                <input type="text" name="name" className={"inputURL"}  placeholder="To"/>
                 <h2 className="compare">Adjust Depth:<span style={{color:"transparent"}}>....</span>
                 <input type="checkbox" name="Compare" className="checkbox" onClick={() => setdepth(prevMode => !prevMode)}/><br/>
                 </h2>
                 <select className={depth ? "dropdown" : "vanish"}>
-                <option selected value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                {/* <option value="10">10</option> */}
                 </select>
                 <br/>
                 <input type="submit" value="Search" className="submit"/>
