@@ -21,7 +21,7 @@ function App() {
     return savedMode || false
   }
 
-  const [tab ,setTab] = React.useState(getInitialTab())
+  const [tab] = React.useState(getInitialTab())
   React.useEffect(() => {
     localStorage.setItem('tab', JSON.stringify(tab));
   } , [tab])
