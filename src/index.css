@@ -279,6 +279,7 @@ button{
   outline: #22d46c;
   border-radius:6px;
   transition: ease-in 0.5s;
+  font-size: 22px;
 }
 .vanish{
 display: none;
