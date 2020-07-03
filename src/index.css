@@ -265,20 +265,55 @@ button{
   font-size: 18px;
   font-weight: 700;
   box-shadow: 0px 0px 5px #22d46c;
-  transition: ease-in 0.2s;
+  /* transition: ease-in 0.2s; */
   margin-top: 18px;
 }
 .inputURL{
   background-color: transparent;
   border-style: solid;
   border-color: #22d46c;
-  width:90%;
-  height:7vh;
+  width:40%;
+  margin-right: 30px;
+  /* margin-left: 30px; */
+  height:60px;
   margin-bottom:40px;
   color: #22d46c;
   outline: #22d46c;
   border-radius:6px;
-  transition: ease-in 0.5s;
+  /* transition: ease-in 0.5s; */
+  font-size: 22px;
+}
+.to{
+  display: inline-block;
+}
+.inputURL2{
+  background-color: transparent;
+  border-style: solid;
+  border-color: #22d46c;
+  width:40%;
+  /* margin-right: 30px; */
+  margin-left: 30px;
+  height:60px;
+  margin-bottom:40px;
+  color: #22d46c;
+  outline: #22d46c;
+  border-radius:6px;
+  /* transition: ease-in 0.5s; */
+  font-size: 22px;
+}
+.inputURL3{
+  background-color: transparent;
+  border-style: solid;
+  border-color: #22d46c;
+  width:90%;
+  /* margin-right: 30px; */
+  /* margin-left: 30px; */
+  height:60px;
+  margin-bottom:40px;
+  color: #22d46c;
+  outline: #22d46c;
+  border-radius:6px;
+  /* transition: ease-in 0.5s; */
   font-size: 22px;
 }
 .vanish{
@@ -359,6 +394,19 @@ color: black;
     display: none;
   }
   .logo-head{
+    display: none;
+  }
+  .inputURL{
+    height: 40px;
+    width: 90%;
+    }
+  .inputURL2{
+    height: 40px;
+    width: 90%;
+  margin-left: 0px;
+
+  }
+  .to{
     display: none;
   }
   /* .menu{
