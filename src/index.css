@@ -118,7 +118,7 @@ button{
   height: 60px;
   /* display: flex; */
   /* justify-content: space-between; */
-  padding: 0 40px;
+  padding: 0 10px;
   position: relative;
   z-index: 999;
 
@@ -131,7 +131,7 @@ button{
   height: 60px;
   /* display: flex; */
   /* justify-content: space-between; */
-  padding: 0 40px;
+  padding: 0 10px;
   position: relative;
   z-index: 999;
 }
@@ -154,15 +154,13 @@ button{
  .menu__list-item {
   display: inline-block;
   height: 100%;
-  margin-right: 20px;
 }
 
- .menu__list-item:last-child {
-  margin-right: 0;
-}
+
 
  .menu__link {
   color: #b6b6b6;
+  color: #22d46c;
   font-weight: 700;
   display: inline-block;
   height: 100%;
@@ -171,7 +169,7 @@ button{
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px 15px;
 }
 
  .menu__link:hover {
@@ -183,7 +181,7 @@ button{
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
   transition: ease-in-out 0.3s;
-  transform: translateX(5%);
+  /* transform: translateX(5%); */
   /* -ms-transform-origin-x: 100%; */
 }
 
@@ -192,7 +190,7 @@ button{
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
   transition: ease-in-out 0.3s;
-  transform: translateX(-5%);
+  /* transform: translateX(-5%); */
   /* -ms-transform-origin-x: 100%; */
 }
 

@@ -20,15 +20,15 @@ function App() {
     return savedMode || false
   }
 
-  const [tab, setTab] = React.useState(getInitialTab())
+  const [tab ,setTab] = React.useState(getInitialTab())
   React.useEffect(() => {
-    localStorage.setItem('Home', JSON.stringify(tab));
+    localStorage.setItem('tab', JSON.stringify(tab));
   } , [tab])
 
   function getInitialTab(){
-    const saver = JSON.parse(localStorage.getItem('Home'));
+    const saver = JSON.parse(localStorage.getItem('tab'));
     console.log(saver);
-    return saver || true
+    return saver || 1
   }
 // console.log(tab)
 
@@ -44,10 +44,15 @@ function App() {
                     <div className="menu__right">
                         <ul className="menu__list">
                           <Link to="/">
-                            <li className={tab ? "menu__list-item menu__link active" : "menu__list-item menu__link"} onClick={tab ? null : () => setTab(prevMode => !prevMode) }>Home</li>
+                            <li className={"menu__list-item menu__link"} onClick={() => localStorage.setItem('tab',"1")}>Home</li>
                             </Link>
+                          
                             <Link to="/search">
-                            <li className={tab ? "menu__list-item menu__link" : "menu__list-item menu__link active2"} onClick={tab ? () => setTab(prevMode => !prevMode) : null }>Search</li>
+                            <li className={"menu__list-item menu__link"} onClick={ () => localStorage.setItem('tab',"2") }>Search</li>
+                            </Link>
+
+                            <Link to="/discover">
+                            <li className={"menu__list-item menu__link"} onClick={() => localStorage.setItem('tab',"3")}>Discover</li>
                             </Link>
                         </ul>
                     </div>
@@ -67,6 +72,7 @@ function App() {
         </div>
       </Route>
       <Route path="/search" component={Searchbox}/>
+      <Route path="/discover" component={Searchbox}/>
       </Switch>
       
 
