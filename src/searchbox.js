@@ -26,12 +26,13 @@ function Searchbox() {
                 <form>
                 <label className="lab">
                     <h2 className="search-heading">Enter two search terms or wiki URLs</h2><br/>
-                    <input type="text" name="name" className="inputURL" placeholder="From"/>
+                    <input type="text" name="name" className="inputURL"/>
                 </label>
                 {/* <h2 className="compare">Compare two terms:<span style={{color:"transparent"}}>....</span>
                 <input type="checkbox" name="Compare" className="checkbox" onClick={() => setCompare(prevMode => !prevMode)}/><br/>
                 </h2> */}
-                <input type="text" name="name" className={"inputURL"}  placeholder="To"/>
+                <h4 className="to">TO</h4>
+                <input type="text" name="name" className={"inputURL2"} />
                 <h2 className="compare">Adjust Depth:<span style={{color:"transparent"}}>....</span>
                 <input type="checkbox" name="Compare" className="checkbox" onClick={() => setdepth(prevMode => !prevMode)}/><br/>
                 </h2>
