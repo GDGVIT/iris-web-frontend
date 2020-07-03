@@ -1,7 +1,7 @@
 import React from 'react';
 function Discover() {
 
-        const [compare, setCompare] = React.useState(false)
+        const [compare] = React.useState(false)
         React.useEffect(() => {
             localStorage.setItem('compare', JSON.stringify(compare));
         } , [compare])
