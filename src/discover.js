@@ -32,8 +32,8 @@ function Discover() {
                 <input type="checkbox" name="Compare" className="checkbox" onClick={() => setCompare(prevMode => !prevMode)}/><br/>
                 </h2> */}
                 {/* <input type="text" name="name" className={compare ? "inputURL" : "vanish"}/> */}
-                <h2 className="compare">Adjust Depth:<span style={{color:"transparent"}}>....</span>
-                <input type="checkbox" name="Compare" className="checkbox" onClick={() => setdepth(prevMode => !prevMode)}/><br/>
+                {/* <h2 className="compare">Adjust Depth:<span style={{color:"transparent"}}>....</span>
+                <input type="checkbox" name="Compare" className="checkbox"/><br/>
                 </h2>
                 <select className={depth ? "dropdown" : "vanish"}>
                 <option selected value="1">1</option>
@@ -41,7 +41,20 @@ function Discover() {
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5">5</option>
-                </select>
+                </select> */}
+                <input
+        className="react-switch-checkbox"
+        id={`react-switch-new`}
+        type="checkbox"
+        onClick={() => setdepth(prevMode => !prevMode)}
+      />
+      <label
+        style={{background:'#06D6A0'}}
+        className="react-switch-label"
+        htmlFor={`react-switch-new`}
+      >
+        <span className={`react-switch-button`} />
+      </label>
                 <br/>
                 <input type="submit" value="Search" className="submit"/>
                 </form>
