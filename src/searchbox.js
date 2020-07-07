@@ -1,7 +1,7 @@
 import React from 'react';
 function Searchbox() {
 
-        const [compare] = React.useState(false)
+        const [compare, setCompare] = React.useState(false)
         React.useEffect(() => {
             localStorage.setItem('compare', JSON.stringify(compare));
         } , [compare])
