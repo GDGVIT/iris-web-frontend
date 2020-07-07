@@ -41,7 +41,7 @@ function LandingContent() {
             Irure dolor nostrud ea proident id nulla esse laboris ad non ex duis culpa proident.
           </h4>
           <br/>
-          <Link to="/search">
+          <Link to="/hoping">
           <button>Start Hoping!</button>
           </Link>
           
