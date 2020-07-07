@@ -118,7 +118,7 @@ button{
   height: 60px;
   /* display: flex; */
   /* justify-content: space-between; */
-  padding: 0 40px;
+  /* padding: 0 10px; */
   position: relative;
   z-index: 999;
 
@@ -131,14 +131,14 @@ button{
   height: 60px;
   /* display: flex; */
   /* justify-content: space-between; */
-  padding: 0 40px;
+  /* padding: 0 10px; */
   position: relative;
   z-index: 999;
 }
 
 .menu__right {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   height: 100%;
 }
 
@@ -171,7 +171,7 @@ button{
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
  .menu__link:hover {
@@ -183,7 +183,7 @@ button{
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
   transition: ease-in-out 0.3s;
-  transform: translateX(5%);
+  /* transform: translateX(5%); */
   /* -ms-transform-origin-x: 100%; */
 }
 
@@ -359,6 +359,47 @@ color: black;
   padding-left:65px;
   position: absolute;
 }
+
+.react-switch-checkbox {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.react-switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  background: grey;
+  border-radius: 100px;
+  position: relative;
+  transition: background-color .2s;
+}
+
+.react-switch-label .react-switch-button {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  transition: 0.2s;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}
+
+.react-switch-checkbox:checked + .react-switch-label .react-switch-button {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+.react-switch-label:active .react-switch-button {
+  width: 60px;
+}
 @media (max-width:1139px){
   .left{
   display: none;
@@ -410,6 +451,12 @@ color: black;
   }
   .to{
     display: none;
+  }
+  .menu__list {
+    
+    margin: 0;
+    /* margin-right: 40px; */
+    /* margin: 0px auto; */
   }
   /* .menu{
     height:100px
