@@ -5,7 +5,7 @@ import Points from './Assets/points.png'
 import './index.css';
 import Searchbox from './searchbox';
 import Discover from './discover';
-import { BrowserRouter as Router, Switch , Route , Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-dom';
 import logo from './Assets/logo.png'
 // import Navbar from './navbar'
 // import bottom from './Assets/bottom.png'
@@ -44,17 +44,17 @@ function App() {
 
                     <div className="menu__right">
                         <ul className="menu__list">
-                          <Link to="/">
-                            <li className={"menu__list-item menu__link"} onClick={() => localStorage.setItem('tab',"1")}>Home</li>
-                            </Link>
+                          <NavLink exact to="/" className="menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
+                            <li >Home</li>
+                            </NavLink>
                           
-                            <Link to="/search">
-                            <li className={"menu__list-item menu__link"} onClick={ () => localStorage.setItem('tab',"2") }>Search</li>
-                            </Link>
+                            <NavLink to="/search" className={"menu__list-item menu__link"} activeClassName="menu__list-item menu__link active" >
+                            <li >Search</li>
+                            </NavLink>
 
-                            <Link to="/discover">
-                            <li className={"menu__list-item menu__link"} onClick={() => localStorage.setItem('tab',"3")}>Discover</li>
-                            </Link>
+                            <NavLink to="/discover" className={"menu__list-item menu__link"} activeClassName="menu__list-item menu__link active">
+                            <li >Discover</li>
+                            </NavLink>
                         </ul>
                     </div>
                         
