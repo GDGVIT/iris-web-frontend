@@ -21,15 +21,15 @@ function App() {
     return savedMode || false
   }
 
-  const [tab ,setTab] = React.useState(getInitialTab())
+  const [tab, setTab] = React.useState(getInitialTab())
   React.useEffect(() => {
-    localStorage.setItem('tab', JSON.stringify(tab));
+    localStorage.setItem('Home', JSON.stringify(tab));
   } , [tab])
 
   function getInitialTab(){
-    const saver = JSON.parse(localStorage.getItem('tab'));
+    const saver = JSON.parse(localStorage.getItem('Home'));
     console.log(saver);
-    return saver || 1
+    return saver || true
   }
 // console.log(tab)
 
@@ -44,6 +44,7 @@ function App() {
 
                     <div className="menu__right">
                         <ul className="menu__list">
+<<<<<<< HEAD
                           <NavLink exact to="/" className="menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
                             <li >Home</li>
                             </NavLink>
@@ -55,6 +56,14 @@ function App() {
                             <NavLink to="/discover" className={"menu__list-item menu__link"} activeClassName="menu__list-item menu__link active">
                             <li >Discover</li>
                             </NavLink>
+=======
+                          <Link to="/">
+                            <li className={tab ? "menu__list-item menu__link active" : "menu__list-item menu__link"} onClick={tab ? null : () => setTab(prevMode => !prevMode) }>Home</li>
+                            </Link>
+                            <Link to="/search">
+                            <li className={tab ? "menu__list-item menu__link" : "menu__list-item menu__link active2"} onClick={tab ? () => setTab(prevMode => !prevMode) : null }>Search</li>
+                            </Link>
+>>>>>>> parent of 1078ead... 3 tabs added
                         </ul>
                     </div>
                         
@@ -73,7 +82,10 @@ function App() {
         </div>
       </Route>
       <Route path="/search" component={Searchbox}/>
+<<<<<<< HEAD
       <Route path="/discover" component={Discover}/>
+=======
+>>>>>>> parent of 1078ead... 3 tabs added
       </Switch>
       
 
