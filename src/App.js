@@ -5,7 +5,7 @@ import Points from './Assets/points.png'
 import './index.css';
 import Searchbox from './searchbox';
 import Discover from './discover';
-import { BrowserRouter as Router, Switch , Route ,  Link} from 'react-router-dom';
+import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-dom';
 import logo from './Assets/logo.png'
 // import Navbar from './navbar'
 // import bottom from './Assets/bottom.png'
@@ -21,16 +21,16 @@ function App() {
     return savedMode || false
   }
 
-  const [tab, setTab] = React.useState(getInitialTab())
-  React.useEffect(() => {
-    localStorage.setItem('Home', JSON.stringify(tab));
-  } , [tab])
+  // const [tab, setTab] = React.useState(getInitialTab())
+  // React.useEffect(() => {
+  //   localStorage.setItem('Home', JSON.stringify(tab));
+  // } , [tab])
 
-  function getInitialTab(){
-    const saver = JSON.parse(localStorage.getItem('Home'));
-    console.log(saver);
-    return saver || true
-  }
+  // function getInitialTab(){
+  //   const saver = JSON.parse(localStorage.getItem('Home'));
+  //   console.log(saver);
+  //   return saver || true
+  // }
 // console.log(tab)
 
 
@@ -44,12 +44,15 @@ function App() {
 
                     <div className="menu__right">
                         <ul className="menu__list">
-                          <Link to="/">
-                            <li className={tab ? "menu__list-item menu__link active" : "menu__list-item menu__link"} onClick={tab ? null : () => setTab(prevMode => !prevMode) }>Home</li>
-                            </Link>
-                            <Link to="/search">
-                            <li className={tab ? "menu__list-item menu__link" : "menu__list-item menu__link active2"} onClick={tab ? () => setTab(prevMode => !prevMode) : null }>Search</li>
-                            </Link>
+                          <NavLink exact to="/" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
+                            <li>Home</li>
+                            </NavLink>
+                            <NavLink to="/hoping" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
+                            <li>hoping</li>
+                            </NavLink>
+                            <NavLink to="/discover" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
+                            <li>Discover</li>
+                            </NavLink>
                         </ul>
                     </div>
                         
@@ -67,7 +70,8 @@ function App() {
           <h5 style={{paddingLeft:"20px"}}>We have <span onClick={() => setDarkMode(prevMode => !prevMode)} className="mode-button">{darkMode ? "light mode" : "dark mode"}</span> for you </h5>
         </div>
       </Route>
-      <Route path="/search" component={Searchbox}/>
+      <Route path="/hoping" component={Searchbox}/>
+      <Route path="/discover" component={Discover}/>
       </Switch>
       
 
