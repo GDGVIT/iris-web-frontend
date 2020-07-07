@@ -5,7 +5,7 @@ import Points from './Assets/points.png'
 import './index.css';
 import Searchbox from './searchbox';
 import Discover from './discover';
-import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-dom';
+import { BrowserRouter as Router, Switch , Route ,  Link} from 'react-router-dom';
 import logo from './Assets/logo.png'
 // import Navbar from './navbar'
 // import bottom from './Assets/bottom.png'
@@ -44,26 +44,12 @@ function App() {
 
                     <div className="menu__right">
                         <ul className="menu__list">
-<<<<<<< HEAD
-                          <NavLink exact to="/" className="menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
-                            <li >Home</li>
-                            </NavLink>
-                          
-                            <NavLink to="/search" className={"menu__list-item menu__link"} activeClassName="menu__list-item menu__link active" >
-                            <li >Search</li>
-                            </NavLink>
-
-                            <NavLink to="/discover" className={"menu__list-item menu__link"} activeClassName="menu__list-item menu__link active">
-                            <li >Discover</li>
-                            </NavLink>
-=======
                           <Link to="/">
                             <li className={tab ? "menu__list-item menu__link active" : "menu__list-item menu__link"} onClick={tab ? null : () => setTab(prevMode => !prevMode) }>Home</li>
                             </Link>
                             <Link to="/search">
                             <li className={tab ? "menu__list-item menu__link" : "menu__list-item menu__link active2"} onClick={tab ? () => setTab(prevMode => !prevMode) : null }>Search</li>
                             </Link>
->>>>>>> parent of 1078ead... 3 tabs added
                         </ul>
                     </div>
                         
@@ -82,10 +68,8 @@ function App() {
         </div>
       </Route>
       <Route path="/search" component={Searchbox}/>
-<<<<<<< HEAD
+
       <Route path="/discover" component={Discover}/>
-=======
->>>>>>> parent of 1078ead... 3 tabs added
       </Switch>
       
 
