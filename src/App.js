@@ -68,8 +68,6 @@ function App() {
         </div>
       </Route>
       <Route path="/search" component={Searchbox}/>
-
-      <Route path="/discover" component={Discover}/>
       </Switch>
       
 
