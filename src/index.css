@@ -182,8 +182,8 @@ button{
   color: #22d46c;
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
-  transition: ease-in-out 0.3s;
-  /* transform: translateX(5%); */
+  transition: ease-in-out 0.1s;
+  /* transform: translateX(45%); */
   /* -ms-transform-origin-x: 100%; */
 }
 
@@ -191,8 +191,8 @@ button{
   color: #22d46c;
   border-bottom: 4px solid #22d46c;
   font-weight: 700;
-  transition: ease-in-out 0.3s;
-  transform: translateX(-5%);
+  /* transition: ease-in-out 0.3s; */
+  /* transform: translateY(-5%); */
   /* -ms-transform-origin-x: 100%; */
 }
 
@@ -275,7 +275,8 @@ button{
   border-style: solid;
   border-color: #22d46c;
   width:40%;
-  margin-right: 30px;
+  margin-right: 20px;
+  padding-left:15px;
   /* margin-left: 30px; */
   height:60px;
   margin-bottom:40px;
@@ -294,8 +295,9 @@ button{
   border-color: #22d46c;
   width:40%;
   /* margin-right: 30px; */
-  margin-left: 30px;
+  margin-left: 20px;
   height:60px;
+  padding-left:15px;
   margin-bottom:40px;
   color: #22d46c;
   outline: #22d46c;
@@ -321,7 +323,6 @@ button{
 .vanish{
 display: none;
 transition: ease-out 0.5s;
-
 }
 .checkbox{
   width:25px;
