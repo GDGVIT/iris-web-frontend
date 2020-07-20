@@ -1,5 +1,7 @@
 import React from 'react';
-import Graph from 'react-graph-network';
+// import Graph from 'react-graph-network';
+import Graph from "react-graph-vis";
+// import { color } from 'd3';
 // import '../node_modules/react-vis/dist/style.css';
 // import {XYPlot, LineSeries} from 'react-vis';
 // import PropTypes from 'prop-types';
@@ -90,23 +92,61 @@ class Result extends React.Component{
     
       render() {
         
-        const data = {
-          nodes: [
-            {id: "HkqEDLvxE", color: "red"},
-            {id: "011jVS4rb"},
-            {id: "PXACjDxmR"},
-          ],
-          links: [
-            {"source": "HkqEDLvxE", "target": "011jVS4rb"},
-            {"source": "011jVS4rb", "target": "PXACjDxmR"},
-          ]
-        };
-
-
+        
         if(this.props.code ===  200){
+
+          const graph = {
+            nodes: [
+              { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45},
+              { id: 2, label: this.props.mid, title: "node 2 tootip text" ,color:"#22d46c" ,shape: "hexagon"},
+              { id: 3, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" , shape: "hexagon", size:45},
+            ],
+            edges: [
+              { from: 1, to: 2 },
+              { from: 2, to: 3 },
+            ]
+          };
+         
+          const options = {
+            layout: {
+              // hierarchical: false
+              // linear: true
+            },
+            edges: {
+              color: "#22d46c",
+              length: "200"
+            },
+            height: "500px",
+            // width:"600px"
+          };
+         
+          const events = {
+            select: function(event) {
+              var { nodes, edges } = event;
+            }
+          };
+
+          if(this.props.length === 2){
+            const graph = {
+              nodes: [
+                { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45},
+                { id: 2, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" ,  size:45, font:'30px arial red'},
+              ],
+              edges: [
+                { from: 1, to: 2 },
+              ]
+            };
+          }
+  
           return (
-            <div style={{textAlign:"center"}}>
-              {this.props.start} {this.props.mid} {this.props.end}
+            <div style={{textAlign:"center",marginTop:"-200px"}}>
+               <Graph
+      graph={graph}
+      options={options}
+      events={events}
+      getNetwork={network => {
+      }}
+    />
             </div>
             )
         }
@@ -126,9 +166,9 @@ class Result extends React.Component{
         }
         if (this.props.length === null){ 
           return (
-            <div style={{textAlign:"center",zIndex:"999999",marginTop:"-100px",height:"40vh"}}>
-              {/* Let's compare stuff */}
-              <Graph data={data} enableDrag={true} nodeDistance={2000}/>
+            <div style={{textAlign:"center"}}>
+              Let's compare stuff
+              {/* <Graph data={data} enableDrag={true} nodeDistance={2000}/> */}
             </div>
             )
         }
