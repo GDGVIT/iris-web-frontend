@@ -104,11 +104,11 @@ class Result extends React.Component{
         else if(this.props.change ===  4){
           const graph = {
             nodes: [
-              { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45 ,font:'20px arial #22d46c'},
-              { id: 2, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" ,  size:45  , font:'20px arial #22d46c' ,shape: "hexagon"},
+              { id: 10, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45 ,font:'20px arial #22d46c'},
+              { id: 20, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" ,  size:45  , font:'20px arial #22d46c' ,shape: "hexagon"},
             ],
             edges: [
-              { from: 1, to: 2 },
+              { from: 10, to: 20 },
             ]
           };
 
