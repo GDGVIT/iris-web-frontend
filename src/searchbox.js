@@ -73,8 +73,6 @@ fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
       this.setState({visible: false })
       if (result.code === 404){
         this.setState({code:result.code , length : 3 , change: 2})
-        console.log(result)
-        console.log("404")
       }
     else if (result.graph.length === 3){
         this.setState({start:result.graph[0],mid:result.graph[1],end:result.graph[2], length : 3, code:result.code, change: 3})
