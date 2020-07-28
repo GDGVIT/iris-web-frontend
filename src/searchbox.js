@@ -49,7 +49,7 @@ class Searchbox extends React.Component{
 
 
       mySubmitHandler = (event) => {
-          this.setState({visible: true, change: 1})
+        this.setState({visible: true, change: 1})
         event.preventDefault();
         console.log(this.state.start);
         console.log(this.state.end);
@@ -71,15 +71,16 @@ fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
   .then(result => {
       this.setState({visible: false })
       if (result.code === 404){
-        this.setState({code:result.code})
+        this.setState({code:result.code , length : 3 , change: 2})
         console.log(result)
+        console.log("404")
       }
     else if (result.graph.length === 3){
-        this.setState({start:result.graph[0],mid:result.graph[1],end:result.graph[2], length : 3, code:result.code})
+        this.setState({start:result.graph[0],mid:result.graph[1],end:result.graph[2], length : 3, code:result.code, change: 3})
         console.log(this.state)
     }
     else if (result.graph.length === 2){
-        this.setState({start:result.graph[0],end:result.graph[1], length : 2, code:result.code})
+        this.setState({start:result.graph[0],end:result.graph[1], length : 2, code:result.code , mid:"" , change: 4})
         console.log(this.state)
     }
     
@@ -119,7 +120,7 @@ fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
             {/* <div style={{textAlign:"center",fontSize:"25px"}}>
                 Let's compare stuff !
             </div> */}
-                <Loader type="BallTriangle" color="#22d46c" height={100} width={100} style={{textAlign:"center"}} visible={this.state.visible} timeout={30000}/>
+                <Loader type="BallTriangle" color="#22d46c" height={100} width={100} style={{textAlign:"center"}} visible={this.state.visible} />
                 <div className={this.state.visible ? "vanish" : "showhop"}>
                 <Result code={this.state.code} length={this.state.length} start={this.state.start} end={this.state.end} mid={this.state.mid} change={this.state.change}/>
                 </div>
