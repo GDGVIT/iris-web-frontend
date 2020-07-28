@@ -89,13 +89,15 @@ class Discover extends React.Component{
                 <h2>Depth:</h2>
               </label>
               1<span style={{color:"transparent"}}>....</span>
-              <input type="range" min="1" max="5" className="slider" id="myRange" onChange={this.myChangeHandler} name="depth" value={this.state.depth}/>
+              
               <span style={{color:"transparent"}}>....</span>5
               <br/>
               <span className={this.state.message ? "nj" :"vanish"}>Download our GUI for more depth and complex results
               </span>
               <br/> */}
+              <label>
               <input type="submit" value="Search" className="submit"/>
+              </label>
               </form>
           </div>
           <Loader type="BallTriangle" color="#22d46c" height={100} width={100} style={{textAlign:"center"}} visible={this.state.loader} />
