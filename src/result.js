@@ -15,7 +15,18 @@ class Result extends React.Component{
     }
     
       render() {
-        
+        // const nodes:[]
+        // const graph = {
+        //   nodes: [
+        //     { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon",size:45 ,font:'10px arial #22d46c'},
+        //     { id: 2, label: this.props.mid, title: "node 2 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45 ,font:'25px arial #22d46c' },
+        //     { id: 3, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" , shape: "hexagon", size:45 ,font:'10px arial #22d46c'},
+        //   ],
+        //   edges: [
+        //     { from: 1, to: 2 },
+        //     { from: 2, to: 3 },
+        //   ]
+        // };
         
         if (this.props.change === 0){ 
           return (
@@ -68,10 +79,10 @@ class Result extends React.Component{
             // width:"600px"
           };
          
+
           const events = {
-            select: function(event) {
-              var { nodes, edges } = event;
-            }
+            nodes: graph.nodes,
+            edges: graph.edges
           };
 
           
@@ -83,6 +94,7 @@ class Result extends React.Component{
       options={options}
       events={events}
       getNetwork={network => {
+
       }}
     />
             </div>
@@ -116,9 +128,8 @@ class Result extends React.Component{
           };
          
           const events = {
-            select: function(event) {
-              var { nodes, edges } = event;
-            }
+            nodes: graph.nodes,
+            edges: graph.edges
           };
 
           
