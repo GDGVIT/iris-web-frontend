@@ -148,22 +148,63 @@ class Result extends React.Component{
         }
 
 
+        else if(this.props.change ===  5){
+          const graph = {
+            nodes: [
+              { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon",size:45 ,font:'10px arial #22d46c'},
+              { id: 2, label: this.props.mid, title: "node 2 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45 ,font:'20px arial #22d46c' },
+              { id: 3, label: this.props.mid2, title: "node 3 tootip text" ,color:"#22d46c" , shape: "hexagon", size:45 ,font:'20px arial #22d46c'},
+              { id: 4, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" , shape: "hexagon", size:45 ,font:'10px arial #22d46c'},
+            ],
+            edges: [
+              { from: 1, to: 2 },
+              { from: 2, to: 3 },
+              { from: 3, to: 4 },
+            ]
+          };
 
+          const options = {
+            layout: {
+              hierarchical : {
+                direction : 'LR'
+              }
+              
+            },
+            edges: {
+              color: "#22d46c",
+              length: "300"
+            },
+            height: "500px",
+            // width:"600px"
+          };
+         
 
+          const events = {
+            nodes: graph.nodes,
+            edges: graph.edges
+          };
 
-
-
-
-        // if (this.props.length === 2){
           
-        // }
-        // else if (this.props.length === 1){
-        //   const graph = {
-        //     nodes: [
-        //       { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45},
-        //     ],
-        //   };
-        // }
+  
+          return (
+            <div style={{textAlign:"center",marginTop:"-200px"}}>
+               <Graph
+      graph={graph}
+      options={options}
+      events={events}
+      getNetwork={network => {
+
+      }}
+    />
+            </div>
+            )
+        }
+
+
+
+
+
+       
         
         
       }
