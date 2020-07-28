@@ -40,7 +40,7 @@ class Resultexplore extends React.Component{
           for(let i = 0; i< nodelength ; i++){
               graph.nodes.push(`id: name, label: name, title: "garbage" ,color:"#22d46c" ,shape: "hexagon",size:45 ,font:'10px arial #22d46c`)
           }
-          console.log(graph.nodes)
+          console.log(graph.nodes) 
           const options = {
             layout: {
               hierarchical : {
