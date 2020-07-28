@@ -18,6 +18,7 @@ class Searchbox extends React.Component{
         this.state = {  length: null,
                         start : "",
                         mid : " " , 
+                        mid2 : " " , 
                         end: '',
                         code: '',
                         visible: false,
@@ -83,6 +84,10 @@ fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
         this.setState({start:result.graph[0],end:result.graph[1], length : 2, code:result.code , mid:"" , change: 4})
         console.log(this.state)
     }
+    else if (result.graph.length === 4){
+      this.setState({start:result.graph[0],end:result.graph[1], length : 4, code:result.code , mid:result.graph[1] ,mid2:result.graph[2], change: 5})
+      console.log(this.state)
+  }
     
   }
  
@@ -109,7 +114,7 @@ fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
                 </h2> */}
                 <h4 className="to">TO</h4>
                 <input type="text" className={"inputURL2"} placeholder="To"  onChange={this.myChangeHandler} name="end" />
-                {/* <h2 className="compare">Adjust Depth:<span style={{color:"transparent"}}>....</span>
+                {/* <h2 className="compare">Adjust Depth:
                 <input type="checkbox" name="Compare" className="checkbox" onClick={() => setdepth(prevMode => !prevMode)}/><br/>
                 </h2> */}
                 
@@ -122,7 +127,7 @@ fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
             </div> */}
                 <Loader type="BallTriangle" color="#22d46c" height={100} width={100} style={{textAlign:"center"}} visible={this.state.visible} />
                 <div className={this.state.visible ? "vanish" : "showhop"}>
-                <Result code={this.state.code} length={this.state.length} start={this.state.start} end={this.state.end} mid={this.state.mid} change={this.state.change}/>
+                <Result code={this.state.code} length={this.state.length} start={this.state.start} end={this.state.end} mid={this.state.mid} change={this.state.change} mid2={this.state.mid2}/>
                 </div>
             </>
         )
