@@ -107,17 +107,15 @@ fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
                     <h2 className="search-heading">Enter two search terms or wiki URLs</h2><br/>
                     <input type="text" className="inputURL" placeholder="From" onChange={this.myChangeHandler} name="start" required/>
                 </label>
-                {/* <h2 className="compare">Compare two terms:<span style={{color:"transparent"}}>....</span>
-                <input type="checkbox" name="Compare" className="checkbox" onClick={() => setCompare(prevMode => !prevMode)}/><br/>
-                </h2> */}
+               <label>
                 <h4 className="to">TO</h4>
                 <input type="text" className={"inputURL2"} placeholder="To"  onChange={this.myChangeHandler} name="end" />
-                {/* <h2 className="compare">Adjust Depth:
-                <input type="checkbox" name="Compare" className="checkbox" onClick={() => setdepth(prevMode => !prevMode)}/><br/>
-                </h2> */}
+                </label>
                 
                 <br/>
+                <label>
                 <input type="submit" value="Search" className="submit"/>
+                </label>
                 </form>
             </div>
             {/* <div style={{textAlign:"center",fontSize:"25px"}}>
