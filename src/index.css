@@ -36,7 +36,7 @@ background-color: #23292F;
   /* clip-path: circle(150% at 100% 0%); */
 }
 .content{
-  padding-left:20px;
+  padding-left:40px;
   /* width:calc(100vw-30px); */
 }
 a{
@@ -401,6 +401,12 @@ color: black;
 .react-switch-label:active .react-switch-button {
   width: 60px;
 }
+.dork{
+  padding-left: 40px;
+}
+.dorkin{
+  padding-left: 40px;
+}
 @media (max-width:1139px){
   .left{
   display: none;
@@ -452,6 +458,15 @@ color: black;
   }
   .to{
     display: none;
+  }
+  .content{
+    padding-left:20px;
+  }
+  .dork{
+    padding-left: 20px;
+  }
+  .dorkin{
+    padding-left: 20px;
   }
   .menu__list {
     
