@@ -10,10 +10,10 @@ function Discover() {
         //     const savedcheck = JSON.parse(localStorage.getItem('compare'));
         //     return savedcheck || false
         // }
-        const [depth, setdepth] = React.useState(false)
-        React.useEffect(() => {
-            localStorage.setItem('depth', JSON.stringify(depth));
-        } , [depth])
+        // const [depth, setdepth] = React.useState(false)
+        // React.useEffect(() => {
+        //     localStorage.setItem('depth', JSON.stringify(depth));
+        // } , [depth])
 
         // function getInitialDepth(){
         //     const savedcheck = JSON.parse(localStorage.getItem('depth'));
@@ -25,36 +25,16 @@ function Discover() {
             <div className="search-box">
                 <form>
                 <label className="lab">
-                    <h2 className="search-heading">Enter search term or wiki URL</h2><br/>
+                    <h2 className="search-heading">Enter search term or wiki URL</h2>
                     <input type="text" name="url1" className="inputURL3"/>
                 </label>
-                {/* <h2 className="compare">Compare two terms:<span style={{color:"transparent"}}>....</span>
-                <input type="checkbox" name="Compare" className="checkbox" onClick={() => setCompare(prevMode => !prevMode)}/><br/>
-                </h2> */}
-                {/* <input type="text" name="name" className={compare ? "inputURL" : "vanish"}/> */}
-                {/* <h2 className="compare">Adjust Depth:<span style={{color:"transparent"}}>....</span>
-                <input type="checkbox" name="Compare" className="checkbox"/><br/>
-                </h2>
-                <select className={depth ? "dropdown" : "vanish"}>
-                <option selected value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                </select> */}
-                <input
-        className="react-switch-checkbox"
-        id={`react-switch-new`}
-        type="checkbox"
-        onClick={() => setdepth(prevMode => !prevMode)}
-      />
-      <label
-        style={{background:'#06D6A0'}}
-        className="react-switch-label"
-        htmlFor={`react-switch-new`}
-      >
-        <span className={`react-switch-button`} />
-      </label>
+                <label>
+                  <h2>Depth:</h2>
+                </label>
+                1<span style={{color:"transparent"}}>....</span>
+                <input type="range" min="1" max="5" class="slider" id="myRange"/>
+                <span style={{color:"transparent"}}>....</span>5
+                <br/>
                 <br/>
                 <input type="submit" value="Search" className="submit"/>
                 </form>
