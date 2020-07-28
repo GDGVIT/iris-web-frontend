@@ -407,6 +407,9 @@ color: black;
 .dorkin{
   padding-left: 40px;
 }
+.slider{
+  width:70%;
+}
 @media (max-width:1139px){
   .left{
   display: none;
