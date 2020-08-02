@@ -67,7 +67,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://dscwikiweb.herokuapp.com/getPath", requestOptions)
+fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
   .then(response => response.json())
   .then(result => {
       this.setState({visible: false })
