@@ -49,11 +49,11 @@ class Discover extends React.Component{
           redirect: 'follow'
         };
 
-        fetch("https://dscwikiweb.herokuapp.com/explore", requestOptions)
+        fetch("https://aqueous-dusk-74394.herokuapp.com/explore", requestOptions)
           .then(response => response.json())
           .then(result => {
               this.setState({loader: false }) 
-              console.log(result)
+              // console.log(result)
               
               // if(result.code === 200){
                 // console.log(result.edges)
@@ -71,6 +71,7 @@ class Discover extends React.Component{
           }
           )
           .catch(error =>{console.log(error)
+            this.setState({render: 1})
             this.setState({loader: false})
         }
         );
