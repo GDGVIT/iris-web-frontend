@@ -51,9 +51,9 @@ class Resultexplore extends React.Component{
           const options = {
             layout: {
               hierarchical : true,
-              hierarchical : {
-                direction : 'UD'
-              }
+              // hierarchical : {
+              //   direction : 'UD'
+              // }
             },
             edges: {
               color: "#22d46c",
