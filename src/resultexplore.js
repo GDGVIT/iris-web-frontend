@@ -38,13 +38,21 @@ class Resultexplore extends React.Component{
           };
           let nodelength = this.props.nodelength
           for(let i = 0; i< nodelength ; i++){
-              graph.nodes.push(`id: name, label: name, title: "garbage" ,color:"#22d46c" ,shape: "hexagon",size:45 ,font:'10px arial #22d46c`)
+            const add = {id: this.props.nodes[i], label: this.props.nodes[i], title: this.props.nodes[i] ,color:"#22d46c" ,shape: "hexagon",size:25 ,font:'10px arial #22d46c'}
+            graph.nodes.push(add)
           }
-          console.log(graph.nodes) 
+          let edgelength = this.props.edgelength
+          for(let j = 0; j< edgelength ; j++){
+            const addedge = { from: this.props.edges[j][0], to: this.props.edges[j][1] }
+            graph.edges.push(addedge)
+          }
+          console.log(graph.edges) 
+          console.log(this.props.edges[1][0]) 
           const options = {
             layout: {
+              hierarchical : true,
               hierarchical : {
-                // direction : 'LR'
+                direction : 'UD'
               }
             },
             edges: {
