@@ -36,11 +36,32 @@ class Discover extends React.Component{
         this.setState({loader: true})
         event.preventDefault();
         // console.log(this.state);
+        var url = this.state.start
+        if (this.state.start.slice(0,4) === "http"){
+          url=""
+          for (let i = 0; i < 30; i++) {
+            if (this.state.start.slice(i,i+22) === "en.wikipedia.org/wiki/"){
+              console.log("link");
+              for (let j = i+22; j < this.state.start.length ; j++){
+                if(this.state.start[j] === "_"){
+                  url= url + " "
+                }
+                if(this.state.start[j] !== "_"){
+                  url += this.state.start[j]
+                }
+              }
+              // console.log(url);
+              // this.setState({start : url})
+            }
+        }
+        this.setState({start : url})
+        // console.log(this.state.start)
+      }
 
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
-        var raw = JSON.stringify({"start":this.state.start});
+        var raw = JSON.stringify({"start":url});
 
         var requestOptions = {
           method: 'POST',
@@ -83,9 +104,10 @@ class Discover extends React.Component{
           <div className="search-box">
               <form onSubmit={this.mySubmitHandler}>
               <label className="lab">
-                  <h2 className="search-heading">Enter search term or wiki URL</h2>
+                  <h2 className="search-heading">Enter search term or wiki URL</h2><br/>
                   <input type="text" name="start" className="inputURL3" onChange={this.myChangeHandler} required/>
               </label>
+              
               {/* <label>
                 <h2>Depth:</h2>
               </label>
@@ -99,6 +121,8 @@ class Discover extends React.Component{
               <label>
               <input type="submit" value="Search" className="submit"/>
               </label>
+              {/* <span style={{color:"transparent"}}>..................</span> */}
+              <button type="download" value="export" className={this.state.render === 2 ? "export" : "vanish"}>Export</button>
               </form>
           </div>
           <Loader type="BallTriangle" color="#22d46c" height={100} width={100} style={{textAlign:"center"}} visible={this.state.loader} />
