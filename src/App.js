@@ -5,8 +5,10 @@ import Points from './Assets/points.png'
 import './index.css';
 import Searchbox from './searchbox';
 import Discover from './discover';
+import Download from './download';
 import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-dom';
 import logo from './Assets/logo.png'
+import { loadReCaptcha } from 'react-recaptcha-v3'
 // import Navbar from './navbar'
 // import bottom from './Assets/bottom.png'
 
@@ -18,9 +20,9 @@ function App() {
 
   function getInitialMode(){
     const savedMode = JSON.parse(localStorage.getItem('dark'));
-    return savedMode || false
+    return savedMode || true
   }
-
+  loadReCaptcha("6LfpxLoZAAAAAHUYwsedyR1gGw9mRXtHqhEA4TXQ");
   // const [tab, setTab] = React.useState(getInitialTab())
   // React.useEffect(() => {
   //   localStorage.setItem('Home', JSON.stringify(tab));
@@ -47,11 +49,14 @@ function App() {
                           <NavLink exact to="/" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
                             <li>Home</li>
                             </NavLink>
-                            <NavLink to="/hoping" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
-                            <li>hoping</li>
+                            <NavLink to="/hopping" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
+                            <li>hopping</li>
                             </NavLink>
                             <NavLink to="/discover" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
                             <li>Discover</li>
+                            </NavLink>
+                            <NavLink to="/download" className= "menu__list-item menu__link" activeClassName="menu__list-item menu__link active">
+                            <li>Download</li>
                             </NavLink>
                         </ul>
                     </div>
@@ -70,8 +75,9 @@ function App() {
           <h5 className={"dorkin"}>We have <span onClick={() => setDarkMode(prevMode => !prevMode)} className="mode-button">{darkMode ? "light mode" : "dark mode"}</span> for you </h5>
         </div>
       </Route>
-      <Route path="/hoping" component={Searchbox}/>
+      <Route path="/hopping" component={Searchbox}/>
       <Route path="/discover" component={Discover}/>
+      <Route path="/download" component={Download}/>
       </Switch>
       
 
