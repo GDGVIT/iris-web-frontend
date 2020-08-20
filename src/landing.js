@@ -22,10 +22,10 @@ function LandingContent() {
   return (
     <div className="content">
           <h1>
-            Introducing you,<br/>to the <span style={{color:"#22d46c"}}>efficient</span> way for web hoping!
+            Introducing you,<br/>to the <span style={{color:"#22d46c"}}>efficient</span> way for web hopping!
           </h1>
           <br/>
-          <a href ={"https://dscvit.com"}>www.wikiweb.com</a>
+          <a href ={"https://dscvit.com"}>www.dscvit.com</a>
           <br/>
           <br/>
           <h1>
@@ -41,8 +41,8 @@ function LandingContent() {
             Irure dolor nostrud ea proident id nulla esse laboris ad non ex duis culpa proident.
           </h4>
           <br/>
-          <Link to="/hoping">
-          <button>Start Hoping!</button>
+          <Link to="/hopping">
+          <button>Start Hopping!</button>
           </Link>
           
           {/* <Button variant="contained" color="primary" text="primary">
