@@ -3,6 +3,8 @@ import './index.css';
 import Result from './result';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
+import {Link} from 'react-router-dom';
+import { ReCaptcha } from 'react-recaptcha-v3'
 
 // import { values } from 'd3';
 // function Searchbox() {
@@ -17,9 +19,9 @@ class Searchbox extends React.Component{
         super(props);
         this.state = {  length: null,
                         start : "",
-                        mid : " " , 
-                        mid2 : " " , 
-                        end: '',
+                        mid : "" , 
+                        mid2 : "" , 
+                        end: "",
                         code: '',
                         visible: false,
                         change: 0,
@@ -46,19 +48,73 @@ class Searchbox extends React.Component{
         let nam = event.target.name;
         let val = event.target.value;
         this.setState({[nam]: val});
+        // console.log(this.state)
       }
-
+      verifyCallback = (recaptchaToken) => {
+        // Here you will get the final recaptchaToken!!!  
+        // console.log(recaptchaToken, "<= your recaptcha token")
+        localStorage.setItem("captcha", recaptchaToken);
+      }
+    
+      updateToken = () => {
+        // you will get a new token in verifyCallback
+        this.recaptcha.execute();
+      }
 
       mySubmitHandler = (event) => {
         this.setState({visible: true, change: 1})
         event.preventDefault();
-        console.log(this.state.start);
-        console.log(this.state.end);
+        
+        var url = this.state.start
+        var url2 = this.state.end
+        if (this.state.start.slice(0,4) === "http"){
+          url=""
+          for (let i = 0; i < 30; i++) {
+            if (this.state.start.slice(i,i+22) === "en.wikipedia.org/wiki/"){
+              console.log("link");
+              for (let j = i+22; j < this.state.start.length ; j++){
+                if(this.state.start[j] === "_"){
+                  url= url + " "
+                }
+                if(this.state.start[j] !== "_"){
+                  url += this.state.start[j]
+                }
+              }
+              // console.log(url);
+              // this.setState({start : url})
+            }
+        }
+        // this.setState({start : url})
+        // console.log(this.state.start)
+      }
+        if (this.state.end.slice(0,4) === "http"){
+          url2=""
+          for (let i = 0; i < 30; i++) {
+            if (this.state.end.slice(i,i+22) === "en.wikipedia.org/wiki/"){
+              console.log("link");
+              for (let j = i+22; j < this.state.end.length ; j++){
+                if(this.state.end[j] === "_"){
+                  url2= url2 + " "
+                }
+                if(this.state.end[j] !== "_"){
+                  url2 += this.state.end[j]
+                }
+              }
+              // console.log(url2);
+            }
+        }
+        // this.setState({end : url2})
+      }
+      // console.log(`"${url}"`);
+      // console.log(url2);
 
         var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
+myHeaders.append("g-recaptcha-response", localStorage.getItem("captcha"));
 
-var raw = JSON.stringify({"start":this.state.start,"end":this.state.end});
+var raw = JSON.stringify({"start":url,"end":url2});
+console.log(raw)
+console.log(myHeaders)
 
 var requestOptions = {
   method: 'POST',
@@ -83,7 +139,7 @@ fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
         console.log(this.state)
     }
     else if (result.graph.length === 4){
-      this.setState({start:result.graph[0],end:result.graph[1], length : 4, code:result.code , mid:result.graph[1] ,mid2:result.graph[2], change: 5})
+      this.setState({start:result.graph[0],end:result.graph[3], length : 4, code:result.code , mid:result.graph[1] ,mid2:result.graph[2], change: 5})
       console.log(this.state)
   }
     
@@ -100,6 +156,12 @@ fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
       render() {
         return (
             <>
+            <ReCaptcha
+            ref={ref => this.recaptcha = ref}
+            sitekey="6LfpxLoZAAAAAHUYwsedyR1gGw9mRXtHqhEA4TXQ"
+            action='onLoad'
+            verifyCallback={this.verifyCallback}
+            />
             {/* <h1>Hello {this.state.start} {this.state.end}</h1> */}
             <div className="search-box">
                 <form className="former" onSubmit={this.mySubmitHandler}>
@@ -116,6 +178,9 @@ fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
                 <label>
                 <input type="submit" value="Search" className="submit"/>
                 </label>
+                <Link to="/download">
+                <button type="download" value="export" className={this.state.change !== 0  ? "export" : "vanish"}>Download full version</button>
+                </Link>
                 </form>
             </div>
             {/* <div style={{textAlign:"center",fontSize:"25px"}}>
