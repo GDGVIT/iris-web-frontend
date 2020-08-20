@@ -26,19 +26,13 @@ class Resultexplore extends React.Component{
         else if(this.props.render ===  2){
           const graph = {
             nodes: [
-            //   { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon",size:45 ,font:'10px arial #22d46c'},
-            //   { id: 2, label: this.props.mid, title: "node 2 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45 ,font:'10px arial #22d46c' },
-            //   { id: 3, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" , shape: "hexagon", size:45 ,font:'10px arial #22d46c'},
             ],
             edges: [
-
-            //   { from: 1, to: 2 },
-            //   { from: 2, to: 3 },
             ]
           };
           let nodelength = this.props.nodelength
           for(let i = 0; i< nodelength ; i++){
-            const add = {id: this.props.nodes[i], label: this.props.nodes[i], title: this.props.nodes[i] ,color:"#22d46c" ,shape: "hexagon",size:25 ,font:'10px arial #22d46c'}
+            const add = {id: this.props.nodes[i], label: this.props.nodes[i],} 
             graph.nodes.push(add)
           }
           let edgelength = this.props.edgelength
@@ -55,19 +49,39 @@ class Resultexplore extends React.Component{
               //   direction : 'UD'
               // }
             },
+            // selectNode : {
+
+            // },
             edges: {
-              color: "#22d46c",
+              color: {highlight : "red"},
+              length : 600
             //   length: 300
             },
-            height: "500px",
-            // width:"600px"
+            nodes : {
+
+              color:{highlight : "red",background : "#22d46c",border : "#22d46c"},
+              mass:3,
+              physics:true,
+              shape : "dot",
+              size:25 ,
+              font:'10px arial #22d46c',
+              title : "nirmit"
+            },
+            height: "700px",
+            // interaction: {
+            //   url : 'www.dscvit.com'
+            // }
+            // locale: window.open(URL, "_blank")
+            // event: {
+            //   doubleClick: window.open(URL, "_blank")
+            // }
           };
           const events = {
             nodes: graph.nodes,
-            edges: graph.edges
+            edges: graph.edges 
           };
           return (
-            <div style={{textAlign:"center",marginTop:"-200px"}}>
+            <div style={{textAlign:"center",marginTop:"-220px",position:"fixed",width:"100%"}}>
                <Graph
       graph={graph}
       options={options}
