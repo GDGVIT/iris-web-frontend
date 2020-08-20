@@ -62,6 +62,22 @@ button{
   box-shadow: 0px 0px 5px #22d46c;
   transition: ease-in 0.2s;
 }
+.export{
+  color:white;
+  /* background-color:  #22d46c; */
+  color:#22d46c;
+  background-color: transparent;
+  border-style: solid;
+  border-color: #22d46c;
+  outline: #22d46c;
+  padding:15px;
+  width:250px;
+  font-size: 18px;
+  font-weight: 700;
+  box-shadow: 0px 0px 5px #22d46c;
+  transition: ease-in 0.2s;
+  margin-left: 30px;
+}
 /* .mode-button{
   color:#22d46c;
   background-color: white;
@@ -263,7 +279,7 @@ button{
   border-color: #22d46c;
   outline: #22d46c;
   padding:15px;
-  width:200px;
+  width:250px;
   font-size: 18px;
   font-weight: 700;
   box-shadow: 0px 0px 5px #22d46c;
@@ -477,6 +493,10 @@ color: black;
     margin: 0;
     /* margin-right: 40px; */
     /* margin: 0px auto; */
+  }
+  .export{
+    margin-left: 0;
+    margin-top:20px;
   }
   /* .menu{
     height:100px
