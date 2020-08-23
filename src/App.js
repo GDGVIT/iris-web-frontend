@@ -84,7 +84,7 @@ function App() {
         <br/>
         
         
-        <span style={{padding:"2px 40px",fontWeight:"1px",fontSize:"18px"}}>We are all ears for any suggestions and feedback that you might have for us. Please reach out to us on dscvit@gmail.com for anything you want to say.</span>
+        {/* <span style={{padding:"2px 40px",fontWeight:"1px",fontSize:"18px"}}>We are all ears for any suggestions and feedback that you might have for us. Please reach out to us on dscvit@gmail.com for anything you want to say.</span> */}
       </Route>
       <Route path="/hopping" component={Searchbox}/>
       <Route path="/discover" component={Discover}/>
