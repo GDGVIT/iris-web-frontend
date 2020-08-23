@@ -11,14 +11,14 @@ class Resultexplore extends React.Component{
       render() {
         if (this.props.render === 0){ 
           return (
-            <div style={{textAlign:"center"}}>
+            <div className="result">
               Let's discover stuff
             </div>
             )
         }
         else if(this.props.render === 1){
           return (
-            <div style={{textAlign:"center"}}>
+            <div className="result">
              We couldn't find searched item in the wiki database. Please check the URL, if you have entered it manually.
             </div>
             )
@@ -81,16 +81,16 @@ class Resultexplore extends React.Component{
             edges: graph.edges 
           };
           return (
-            <div style={{textAlign:"center",marginTop:"-220px",position:"fixed",width:"100%"}}>
+            <div className="result2">
                <Graph
-      graph={graph}
-      options={options}
-      events={events}
-      getNetwork={network => {
-
-      }}
-    />
+                  graph={graph}
+                  options={options}
+                  events={events}
+                  getNetwork={network => {
+                  }}
+                />
             </div>
+            
             )
         }
       }
