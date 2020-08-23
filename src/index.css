@@ -14,7 +14,7 @@ code {
 .dark-mode{
 background-color: #23292F;
   color:white;
-  min-height: 140vh;
+  min-height: 145vh;
   width:100vw;
   transition: ease-in 0.5s;
   /* overflow: hidden; */
@@ -309,9 +309,14 @@ button{
   padding: 5px;
   font-weight: 300;
 }
-/* .point{
+.point{
   width:30px;
-} */
+  padding-top:10px;
+}
+.point1{
+  width:30px;
+  padding-top: 18px ;
+}
 .search-box > form{
   height:60vh;
   /* border-style: solid; */
@@ -485,6 +490,11 @@ color: black;
 .dorkin{
   padding-left: 40px;
 }
+.dork1{
+  width:30px;
+  padding-left: 40px;
+  padding-top:22px;
+}
 .slider{
   width:70%;
 }
@@ -515,14 +525,18 @@ color: black;
   width:80%;
   height: 30px;
 }
+.down{
+  /* padding-top:10px; */
+  padding-left: 90px;
+}
 @media (max-width:1139px){
   .left{
   display: none;
     /* clip-path: circle(150% at 100% 0%); */
   } 
   .result1{
-    /* margin-top:300px; */
-    /* height: 40px; */
+    margin-top:300px;
+    height: 40px;
   }
   .result2{
     margin-top:340px;
@@ -598,6 +612,9 @@ color: black;
     margin: 0;
     /* margin-right: 40px; */
     /* margin: 0px auto; */
+  }
+  .dork1{
+    margin-left: -20px;
   }
   .export{
     margin-left: 0;
