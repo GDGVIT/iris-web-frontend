@@ -2,7 +2,9 @@
 import React from 'react';
 import './index.css';
 import {Link} from 'react-router-dom';
-import Points from './Assets/points.png' 
+// import Points from './Assets/points.png' 
+import short from './Assets/social-distancing.svg';
+import pin from './Assets/pin.png';
 
 
 
@@ -32,13 +34,13 @@ function LandingContent() {
             About
           </h1>
           <h4 className="about">
-            Nisi eiusmod eiusmod commodo eiusmod sint veniam est culpa esse anim cupidatat elit. Non consequat sunt incididunt elit laboris fugiat esse voluptate. Nulla cupidatat est elit incididunt nulla consectetur dolore incididunt pariatur sunt qui aliqua ex. Pariatur id non occaecat elit adipisicing commodo et ex occaecat.
+          Hopping on the internet or sometimes referred to as “falling down the rabbit hole” is embarking on an internet search that leads from one website to another forming a series of redirects, ultimately leading to a totally different webpage of a non-related subject. 
             <br/>
             <br/>
-            Irure adipisicing dolore commodo Lorem fugiat magna minim in. Commodo consectetur ullamco nostrud veniam consequat et duis veniam occaecat amet ullamco mollit. Nisi minim
+            WikiWeb is a fun tool for web hoppers to skip on the long hours of surfing the web and hopping between webpages to find between links or paths between two totally unrelated things and instead getting a clean graph listing all hops between those two unrelated things. WikiWeb also allows users to adjust the depth of this graph and even get the shortest path in this graph.
             <br/>
             <br/>
-            Irure dolor nostrud ea proident id nulla esse laboris ad non ex duis culpa proident.
+            It works with the most popular online encyclopedia: Wikipedia and searches Wiki’s database for URL’s and terms.
           </h4>
           <br/>
           <Link to="/hopping">
@@ -50,18 +52,21 @@ function LandingContent() {
         </Button> */}
         <br/>
         <h1>Features</h1>
-        <h4 style={{color:"grey"}}>Qui enim est non irure dolore ut </h4>
+        <h4 style={{color:"grey"}}> This tool can be used by researchers, enthusiastic web hoppers, or in general web geeks to find links between<br/> two totally random things that are present in the Wikipedia database.
+</h4>
         <br/>
         <div className="feature-grid">
-          <img src={Points} alt="point-icon" className="point"/>
+          <img src={short} alt="point-icon" className="point1"/>
           <h5>Allow users to get the shortest</h5>
-          <img src={Points} alt="point-icon" className="point"/>
-          <h5>Allow users to adjust depth</h5>
-          <img src={Points} alt="point-icon" className="point"/>
+          {/* <br/> */}
+          {/* <img src={Points} alt="point-icon" className="point"/>
+          <h5>Allow users to adjust depth</h5> */}
+          <img src={pin} alt="point-icon" className="point"/>
           <h5>Number hops between two items</h5>
           {/* <img src={Points} alt="point-icon" style={{paddingLeft:"20px"}}/>
           <h5 style={{paddingLeft:"20px"}}>We have <span onClick={() => setDarkMode(prevMode => !prevMode)} className="mode-button">{darkMode ? "light mode" : "dark mode"}</span> for you </h5> */}
         </div>
+        
         </div>
   );
 }
