@@ -37,7 +37,7 @@ function LandingContent() {
           Hopping on the internet or sometimes referred to as “falling down the rabbit hole” is embarking on an internet search that leads from one website to another forming a series of redirects, ultimately leading to a totally different webpage of a non-related subject. 
             <br/>
             <br/>
-            WikiWeb is a fun tool for web hoppers to skip on the long hours of surfing the web and hopping between webpages to find between links or paths between two totally unrelated things and instead getting a clean graph listing all hops between those two unrelated things. WikiWeb also allows users to adjust the depth of this graph and even get the shortest path in this graph.
+            Iris is a fun tool for web hoppers to skip on the long hours of surfing the web and hopping between webpages to find between links or paths between two totally unrelated things and instead getting a clean graph listing all hops between those two unrelated things. Iris also allows users to adjust the depth of this graph and even get the shortest path in this graph.
             <br/>
             <br/>
             It works with the most popular online encyclopedia: Wikipedia and searches Wiki’s database for URL’s and terms.
