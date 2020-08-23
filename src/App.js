@@ -47,7 +47,7 @@ function App() {
     <div className="container center">
                 <nav className={darkMode ? "darkmenu" : "menu"}>
                 <img src={logo} className="logo" alt="logo"/>
-                <h3 className="logo-head">Wiki Web</h3>
+                <h3 className="logo-head">IRIS</h3>
 
                     <div className="menu__right">
                         <ul className="menu__list">
