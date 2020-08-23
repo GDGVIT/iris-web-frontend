@@ -30,21 +30,21 @@ class Result extends React.Component{
         
         if (this.props.change === 0){ 
           return (
-            <div style={{textAlign:"center"}}>
+            <div className="result">
               Let's compare stuff
             </div>
             )
         }
         else if(this.props.change === 1){
           return (
-            <div style={{textAlign:"center"}}>
+            <div className="result">
              We couldn't find any connection between the terms. Download our GUI for expanded results
             </div>
             )
         }
         else if(this.props.change === 2){
           return (
-            <div style={{textAlign:"center"}}>
+            <div className="result">
              We couldn't find searched item in the wiki database. Please check the URL, if you have entered it manually.
             </div>
             )
@@ -95,7 +95,7 @@ class Result extends React.Component{
           
   
           return (
-            <div style={{textAlign:"center",marginTop:"-200px",position:"fixed",width:"100%"}}>
+            <div className="result1">
                <Graph
       graph={graph}
       options={options}
@@ -128,7 +128,7 @@ class Result extends React.Component{
             },
             edges: {
               color: "#22d46c",
-              length : 400
+              length : 300
             },
             nodes : {
 
@@ -150,7 +150,7 @@ class Result extends React.Component{
           
   
           return (
-            <div style={{textAlign:"center",marginTop:"-200px",position:"fixed",width:"100%"}}>
+            <div className="result1">
                <Graph
       graph={graph}
       options={options}
@@ -210,7 +210,7 @@ class Result extends React.Component{
           
   
           return (
-            <div style={{textAlign:"center",marginTop:"-200px",position:"fixed",width:"100%"}}>
+            <div className="result1">
                <Graph
       graph={graph}
       options={options}
