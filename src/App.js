@@ -8,7 +8,7 @@ import Discover from './discover';
 import Download from './download';
 import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-dom';
 import logo from './Assets/logo.png'
-import { loadReCaptcha } from 'react-recaptcha-v3'
+// import { loadReCaptcha } from 'react-recaptcha-v3'
 // import Navbar from './navbar'
 // import bottom from './Assets/bottom.png'
 
@@ -22,7 +22,10 @@ function App() {
     const savedMode = JSON.parse(localStorage.getItem('dark'));
     return savedMode || true
   }
-  loadReCaptcha("6LfpxLoZAAAAAHUYwsedyR1gGw9mRXtHqhEA4TXQ");
+  
+    // loadReCaptcha("6LfpxLoZAAAAAHUYwsedyR1gGw9mRXtHqhEA4TXQ");
+
+  
   // const [tab, setTab] = React.useState(getInitialTab())
   // React.useEffect(() => {
   //   localStorage.setItem('Home', JSON.stringify(tab));
