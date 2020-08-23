@@ -151,11 +151,11 @@ fetch("https://radiant-crag-98690.herokuapp.com/getPath", requestOptions)
                 <form className="former" onSubmit={this.mySubmitHandler}>
                 <label className="lab">
                     <h2 className="search-heading">Enter two search terms or wiki URLs</h2><br/>
-                    <input type="text" className="inputURL" placeholder="From" onChange={this.myChangeHandler} name="start" required/>
+                    <input type="text" className="inputURL" placeholder="Start" onChange={this.myChangeHandler} name="start" required/>
                 </label>
                <label>
                 <h4 className="to">TO</h4>
-                <input type="text" className={"inputURL2"} placeholder="To"  onChange={this.myChangeHandler} name="end" />
+                <input type="text" className={"inputURL2"} placeholder="End"  onChange={this.myChangeHandler} name="end" />
                 </label>
                 
                 <br/>
