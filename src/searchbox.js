@@ -4,7 +4,9 @@ import Result from './result';
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from 'react-loader-spinner';
 import {Link} from 'react-router-dom';
+import { loadReCaptcha } from 'react-recaptcha-v3';
 import { ReCaptcha } from 'react-recaptcha-v3'
+// import { ReCaptcha } from 'react-recaptcha-v3'
 
 // import { values } from 'd3';
 // function Searchbox() {
@@ -26,38 +28,18 @@ class Searchbox extends React.Component{
                         visible: false,
                         change: 0,
     };
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
       }
-
-        // postForm('https://dscwikiweb.herokuapp.com/')
-        // .then(data => console.log(data))
-        // .catch(error => console.error(error))
-      
-    //   function postForm(url) {
-    //     const formData = new FormData(document.querySelector('.former'))
-      
-    //     return fetch(url, {
-    //       method: 'POST', // or 'PUT'
-    //       body: formData  // a FormData will automatically set the 'Content-Type'
-    //     })
-    //     .then(response => response.json())
-    //   }
-
     myChangeHandler = (event) => {
         let nam = event.target.name;
         let val = event.target.value;
         this.setState({[nam]: val});
-        // console.log(this.state)
       }
       verifyCallback = (recaptchaToken) => {
-        // Here you will get the final recaptchaToken!!!  
-        // console.log(recaptchaToken, "<= your recaptcha token")
-        localStorage.setItem("captcha", recaptchaToken);
+      this.setState({captcha: recaptchaToken});
+      console.log(recaptchaToken);
       }
     
       updateToken = () => {
-        // you will get a new token in verifyCallback
         this.recaptcha.execute();
       }
 
@@ -107,14 +89,14 @@ class Searchbox extends React.Component{
       }
       // console.log(`"${url}"`);
       // console.log(url2);
-
+      console.log(this.state.captcha)
         var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
-myHeaders.append("g-recaptcha-response", localStorage.getItem("captcha"));
+myHeaders.append("g-recaptcha-response", this.state.captcha);
 
 var raw = JSON.stringify({"start":url,"end":url2});
-console.log(raw)
-console.log(myHeaders)
+// console.log(raw)
+// console.log(myHeaders)
 
 var requestOptions = {
   method: 'POST',
@@ -123,7 +105,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
+fetch("https://radiant-crag-98690.herokuapp.com/getPath", requestOptions)
   .then(response => response.json())
   .then(result => {
       this.setState({visible: false })
@@ -153,13 +135,15 @@ fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
   );
 
       }
+      componentDidMount() {
+        loadReCaptcha("6LfpxLoZAAAAAHUYwsedyR1gGw9mRXtHqhEA4TXQ");
+      }
       render() {
         return (
             <>
             <ReCaptcha
             ref={ref => this.recaptcha = ref}
             sitekey="6LfpxLoZAAAAAHUYwsedyR1gGw9mRXtHqhEA4TXQ"
-            action='onLoad'
             verifyCallback={this.verifyCallback}
             />
             {/* <h1>Hello {this.state.start} {this.state.end}</h1> */}
@@ -176,7 +160,7 @@ fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
                 
                 <br/>
                 <label>
-                <input type="submit" value="Search" className="submit"/>
+                <input type="submit" value="Search" className="submit" onClick={() => this.updateToken()}/>
                 </label>
                 <Link to="/download">
                 <button type="download" value="export" className={this.state.change !== 0  ? "export" : "vanish"}>Download full version</button>
@@ -186,7 +170,7 @@ fetch("https://aqueous-dusk-74394.herokuapp.com/getPath", requestOptions)
             {/* <div style={{textAlign:"center",fontSize:"25px"}}>
                 Let's compare stuff !
             </div> */}
-                <Loader type="BallTriangle" color="#22d46c" height={100} width={100} style={{textAlign:"center"}} visible={this.state.visible} />
+                <Loader type="BallTriangle" color="#22d46c" height={100} width={100} style={{textAlign:"center"}} visible={this.state.visible} className="result"/>
                 <div className={this.state.visible ? "vanish" : "showhop"}>
                 <Result code={this.state.code} length={this.state.length} start={this.state.start} end={this.state.end} mid={this.state.mid} change={this.state.change} mid2={this.state.mid2}/>
                 </div>
