@@ -27,7 +27,7 @@ function LandingContent() {
             Introducing you,<br/>to the <span style={{color:"#22d46c"}}>efficient</span> way for web hopping!
           </h1>
           <br/>
-          <a href ={"https://dscvit.com"}>www.dscvit.com</a>
+          {/* <a href ={"https://dscvit.com"}>www.dscvit.com</a> */}
           <br/>
           <br/>
           <h1>
