@@ -11,14 +11,14 @@ class Resultexplore extends React.Component{
       render() {
         if (this.props.render === 0){ 
           return (
-            <div style={{textAlign:"center"}}>
+            <div className="result">
               Let's discover stuff
             </div>
             )
         }
         else if(this.props.render === 1){
           return (
-            <div style={{textAlign:"center"}}>
+            <div className="result">
              We couldn't find searched item in the wiki database. Please check the URL, if you have entered it manually.
             </div>
             )
@@ -26,49 +26,71 @@ class Resultexplore extends React.Component{
         else if(this.props.render ===  2){
           const graph = {
             nodes: [
-            //   { id: 1, label: this.props.start, title: "node 1 tootip text" ,color:"#22d46c" ,shape: "hexagon",size:45 ,font:'10px arial #22d46c'},
-            //   { id: 2, label: this.props.mid, title: "node 2 tootip text" ,color:"#22d46c" ,shape: "hexagon", size:45 ,font:'10px arial #22d46c' },
-            //   { id: 3, label: this.props.end, title: "node 3 tootip text" ,color:"#22d46c" , shape: "hexagon", size:45 ,font:'10px arial #22d46c'},
             ],
             edges: [
-
-            //   { from: 1, to: 2 },
-            //   { from: 2, to: 3 },
             ]
           };
           let nodelength = this.props.nodelength
           for(let i = 0; i< nodelength ; i++){
-              graph.nodes.push(`id: name, label: name, title: "garbage" ,color:"#22d46c" ,shape: "hexagon",size:45 ,font:'10px arial #22d46c`)
+            const add = {id: this.props.nodes[i], label: this.props.nodes[i],} 
+            graph.nodes.push(add)
           }
-          console.log(graph.nodes) 
+          let edgelength = this.props.edgelength
+          for(let j = 0; j< edgelength ; j++){
+            const addedge = { from: this.props.edges[j][0], to: this.props.edges[j][1] }
+            graph.edges.push(addedge)
+          }
+          console.log(graph.edges) 
+          console.log(this.props.edges[1][0]) 
           const options = {
             layout: {
-              hierarchical : {
-                // direction : 'LR'
-              }
+              hierarchical : true,
+              // hierarchical : {
+              //   direction : 'UD'
+              // }
             },
+            // selectNode : {
+
+            // },
             edges: {
-              color: "#22d46c",
+              color: {highlight : "red"},
+              length : 600
             //   length: 300
             },
-            height: "500px",
-            // width:"600px"
+            nodes : {
+
+              color:{highlight : "red",background : "#22d46c",border : "#22d46c"},
+              mass:3,
+              physics:true,
+              shape : "dot",
+              size:25 ,
+              font:'10px arial #22d46c',
+              title : "nirmit"
+            },
+            height: "700px",
+            // interaction: {
+            //   url : 'www.dscvit.com'
+            // }
+            // locale: window.open(URL, "_blank")
+            // event: {
+            //   doubleClick: window.open(URL, "_blank")
+            // }
           };
           const events = {
             nodes: graph.nodes,
-            edges: graph.edges
+            edges: graph.edges 
           };
           return (
-            <div style={{textAlign:"center",marginTop:"-200px"}}>
+            <div className="result2">
                <Graph
-      graph={graph}
-      options={options}
-      events={events}
-      getNetwork={network => {
-
-      }}
-    />
+                  graph={graph}
+                  options={options}
+                  events={events}
+                  getNetwork={network => {
+                  }}
+                />
             </div>
+            
             )
         }
       }
