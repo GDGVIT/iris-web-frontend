@@ -7,8 +7,7 @@
 </p>
 
 ---
-[![DOCS](https://img.shields.io/badge/Documentation-see%20docs-green?style=flat-square&logo=appveyor)](INSERT_LINK_FOR_DOCS_HERE) 
-  [![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat)](https://github.com/Nirmitjatana/wikiweb-frontend)
+
 [![ForTheBadge built-with-swag](http://ForTheBadge.com/images/badges/built-with-swag.svg)](https://GitHub.com/Nirmitjatana/)
 
 
