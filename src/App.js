@@ -9,6 +9,7 @@ import Download from './download';
 import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-dom';
 import logo from './Assets/logo.png';
 import sun from './Assets/sun.png';
+import dsc from './Assets/short.svg';
 
 // import { loadReCaptcha } from 'react-recaptcha-v3'
 // import Navbar from './navbar'
@@ -82,7 +83,31 @@ function App() {
         <br/>
         <br/>
         <br/>
-        
+        <br/>
+        <br/>
+        <footer className='foot'>
+          <div style={{textAlign:"center",display:"inline-block"}}>
+            <br/>
+            <br/> 
+          For any queries please contact us at,<br/>
+          <a href="mailto:dscvitvellore@gmail.com">dscvitvellore@gmail.com</a>
+          </div>
+          <div style={{float:"right",display:"inline-block"}}>
+      <h3>Developed by</h3>
+      {/* <a > */}
+      <a href ={"https://dscvit.com"} target="_blank" rel="noopener noreferrer">
+      <img src={dsc} alt="" className="log"/>
+      </a>
+      {/* </a> */}
+      </div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      {/* <h2>DSC-VIT</h2> */}
+
+    </footer>
         
         {/* <span style={{padding:"2px 40px",fontWeight:"1px",fontSize:"18px"}}>We are all ears for any suggestions and feedback that you might have for us. Please reach out to us on dscvit@gmail.com for anything you want to say.</span> */}
       </Route>
@@ -91,7 +116,7 @@ function App() {
       <Route path="/download" component={Download}/>
       </Switch>
       
-
+    
     {/* <img src={bottom} alt="bottom" className="bottom"/> */}
     </div>
     </Router>
