@@ -14,12 +14,13 @@ code {
 .dark-mode{
 background-color: #23292F;
   color:white;
-  min-height: 145vh;
+  min-height: 120vh;
   width:100vw;
   transition: ease-in 0.5s;
   /* overflow: hidden; */
 }
 .light-mode{
+  min-height: 120vh;
   /* background-color: #303030; */
   color:#303030;
   transition: ease-in 0.5s;
@@ -273,7 +274,7 @@ button{
   text-indent: -9999999px;
   display: inline-block;
   height: 100%;
-  width: 92px;
+  width: 42px;
   /* background-image: url(logo.png); */
   background-size: cover 100%;
   background-repeat: no-repeat;
@@ -436,7 +437,7 @@ color: black;
 .logo{
   position: absolute;
   padding:12px;
-  width:45px;
+  width:40px;
   /* margin-top: 2px; */
 }
 .logo-head{
@@ -529,6 +530,12 @@ color: black;
   /* padding-top:10px; */
   padding-left: 90px;
 }
+.foot{
+  padding:0px 50px;
+}
+.log{
+  width:140px;
+}
 @media (max-width:1139px){
   .left{
   display: none;
@@ -536,6 +543,10 @@ color: black;
   } 
   .down{
     padding-left:10px;
+  }
+  .foot{
+    padding:0px 15px;
+    display:none;
   }
   .result1{
     margin-top:430px;
