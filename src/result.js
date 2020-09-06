@@ -31,7 +31,7 @@ class Result extends React.Component{
         if (this.props.change === 0){ 
           return (
             <div className="result">
-              Let's compare stuff
+              Let's hop from link to link
             </div>
             )
         }
