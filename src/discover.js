@@ -37,7 +37,7 @@ class Discover extends React.Component{
       }
       verifyCallback = (recaptchaToken) => {
         this.setState({captcha: recaptchaToken});
-        console.log(recaptchaToken);
+        // console.log(recaptchaToken);
         }
       
         updateToken = () => {
