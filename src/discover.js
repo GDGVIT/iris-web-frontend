@@ -182,7 +182,7 @@ class Discover extends React.Component{
               <form onSubmit={this.mySubmitHandler}>
               <label className="lab">
                   <h2 className="search-heading">Enter search term or wiki URL</h2><br/>
-                  <input type="text" name="start" className="inputURL3" onChange={this.myChangeHandler} required placeholder="Paste wikipedia link"/>
+                  <input type="text" name="start" className="inputURL3" onChange={this.myChangeHandler} required placeholder="Paste wikipedia link for better results"/>
               </label>
               
               {/* <label>
