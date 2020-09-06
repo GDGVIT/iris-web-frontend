@@ -14,13 +14,13 @@ code {
 .dark-mode{
 background-color: #23292F;
   color:white;
-  min-height: 120vh;
+  min-height: 140vh;
   width:100vw;
   transition: ease-in 0.5s;
   /* overflow: hidden; */
 }
 .light-mode{
-  min-height: 120vh;
+  min-height: 140vh;
   /* background-color: #303030; */
   color:#303030;
   transition: ease-in 0.5s;
@@ -531,22 +531,47 @@ color: black;
   padding-left: 90px;
 }
 .foot{
+  position: static;
+  /* top:20%; */
+  /* bottom: 1%; */
+  /* height:340px; */
   padding:0px 50px;
+  background-color: white;
+}
+.dark-foot{
+  padding:0px 50px;
+  background-color: #23292F;
 }
 .log{
-  width:140px;
+  width:250px;
+}
+.floater{
+  float: right;
 }
 @media (max-width:1139px){
   .left{
   display: none;
     /* clip-path: circle(150% at 100% 0%); */
   } 
+  .floater{
+    float: none;
+    /* border-style: solid; */
+    /* border-color: red; */
+    /* margin:0px auto;
+     */
+     padding-top:30px;
+     width:100%;
+     text-align: center;
+  }
   .down{
     padding-left:10px;
   }
   .foot{
-    padding:0px 15px;
-    display:none;
+    height: 250px;
+  }
+  .dark-foot{
+    /* padding: 0px 15px; */
+    height: 250px;
   }
   .result1{
     margin-top:430px;
@@ -560,6 +585,9 @@ color: black;
   }
   .menu__link {
     font-size: 10px;
+  }
+  .menu__right{
+    height:45px;
   }
   .search-box > form{
     /* color: #22d46c; */
@@ -594,10 +622,11 @@ color: black;
     width:80vw;
   }
   .logo{
-    display: none;
+    position: relative;
   }
   .logo-head{
-    display: none;
+    display: inline-block;
+    padding-left: 0px;
   }
   .inputURL{
     height: 40px;
@@ -634,12 +663,12 @@ color: black;
     margin-left: 0;
     margin-top:20px;
   }
-  /* .menu{
-    height:100px
+  .menu{
+    height:110px
   }
   .darkmenu{
-    height: 100px;
-  } */
+    height: 110px;
+  }
   /* .feature-grid{
     font-size: 14px;
   } */
