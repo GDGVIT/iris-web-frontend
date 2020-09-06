@@ -10,8 +10,8 @@ import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-
 import logo from './Assets/logo.png';
 import sun from './Assets/sun.png';
 // import dsc from './Assets/short.svg';
-import color from './Assets/dsc-color.png';
-import white from './Assets/dsc-white.png';
+import color from './Assets/dsc-color1.png';
+import white from './Assets/dsc-white1.png';
 
 // import { loadReCaptcha } from 'react-recaptcha-v3'
 // import Navbar from './navbar'
@@ -88,21 +88,19 @@ function App() {
         <br/>
         <br/>
         <footer className={darkMode ? "dark-foot" : "foot"}>
-          <div style={{textAlign:"center",display:"inline-block"}}>
             <br/>
-            <br/> 
+            <br/>
+            {/* <div style={{textAlign:"center"}}> */}
           For any queries please contact us at,<br/>
           <a href="mailto:dscvitvellore@gmail.com">dscvitvellore@gmail.com</a>
-          </div>
-          <div style={{display:"inline-block"}} className="floater">
-            {/* <h3><nobr>A project developed by</nobr></h3> */}
-            {/* <a > */}
+          {/* </div> */}
+          <br/>
+            <br/> 
             <a href ={"https://dscvit.com"} target="_blank" rel="noopener noreferrer">
             <img src={white} alt="" className={darkMode ? "log" : "vanish"}/>
             <img src={color} alt="" className={darkMode ? "vanish" : "log"}/>
             </a>
-            {/* </a> */}
-            </div>
+          
     
       {/* <h2>DSC-VIT</h2> */}
 

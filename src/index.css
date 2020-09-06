@@ -535,16 +535,17 @@ color: black;
   /* top:20%; */
   /* bottom: 1%; */
   /* height:340px; */
-  padding:0px 50px;
+  padding:0px 40px;
   background-color: white;
 }
 .dark-foot{
-  padding:0px 50px;
+  padding:0px 40px;
   background-color: #23292F;
   height:200px;
 }
 .log{
-  width:300px;
+  width:450px;
+  /* padding-left:50px; */
 }
 .floater{
   float: right;
@@ -570,6 +571,9 @@ color: black;
   display: none;
     /* clip-path: circle(150% at 100% 0%); */
   } 
+  .log{
+    width:320px;
+  }
   .floater{
     float: none;
     /* border-style: solid; */
