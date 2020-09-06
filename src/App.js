@@ -95,7 +95,7 @@ function App() {
           <a href="mailto:dscvitvellore@gmail.com">dscvitvellore@gmail.com</a>
           </div>
           <div style={{display:"inline-block"}} className="floater">
-            <h3>A project by</h3>
+            <h3>A project developed by</h3>
             {/* <a > */}
             <a href ={"https://dscvit.com"} target="_blank" rel="noopener noreferrer">
             <img src={white} alt="" className={darkMode ? "log" : "vanish"}/>
