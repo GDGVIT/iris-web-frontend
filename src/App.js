@@ -9,7 +9,9 @@ import Download from './download';
 import { BrowserRouter as Router, Switch , Route ,  NavLink} from 'react-router-dom';
 import logo from './Assets/logo.png';
 import sun from './Assets/sun.png';
-import dsc from './Assets/short.svg';
+// import dsc from './Assets/short.svg';
+import color from './Assets/dsc-color.png';
+import white from './Assets/dsc-white.png';
 
 // import { loadReCaptcha } from 'react-recaptcha-v3'
 // import Navbar from './navbar'
@@ -85,21 +87,22 @@ function App() {
         <br/>
         <br/>
         <br/>
-        <footer className='foot'>
+        <footer className={darkMode ? "dark-foot" : "foot"}>
           <div style={{textAlign:"center",display:"inline-block"}}>
             <br/>
             <br/> 
           For any queries please contact us at,<br/>
           <a href="mailto:dscvitvellore@gmail.com">dscvitvellore@gmail.com</a>
           </div>
-          <div style={{float:"right",display:"inline-block"}}>
-      <h3>Developed by</h3>
-      {/* <a > */}
-      <a href ={"https://dscvit.com"} target="_blank" rel="noopener noreferrer">
-      <img src={dsc} alt="" className="log"/>
-      </a>
-      {/* </a> */}
-      </div>
+          <div style={{display:"inline-block"}} className="floater">
+            <h3>A project by</h3>
+            {/* <a > */}
+            <a href ={"https://dscvit.com"} target="_blank" rel="noopener noreferrer">
+            <img src={white} alt="" className={darkMode ? "log" : "vanish"}/>
+            <img src={color} alt="" className={darkMode ? "vanish" : "log"}/>
+            </a>
+            {/* </a> */}
+            </div>
       <br/>
       <br/>
       <br/>
@@ -107,7 +110,7 @@ function App() {
       <br/>
       {/* <h2>DSC-VIT</h2> */}
 
-    </footer>
+      </footer>
         
         {/* <span style={{padding:"2px 40px",fontWeight:"1px",fontSize:"18px"}}>We are all ears for any suggestions and feedback that you might have for us. Please reach out to us on dscvit@gmail.com for anything you want to say.</span> */}
       </Route>
