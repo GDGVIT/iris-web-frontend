@@ -151,6 +151,7 @@ fetch("https://radiant-crag-98690.herokuapp.com/getPath", requestOptions)
                 <form className="former" onSubmit={this.mySubmitHandler}>
                 <label className="lab">
                     <h2 className="search-heading">Enter two search terms or wiki URLs</h2><br/>
+                    <h6>Wikipedia pages are case sensitive.*  Enter links for better results.</h6>
                     <input type="text" className="inputURL" placeholder="Hop from" onChange={this.myChangeHandler} name="start" required/>
                 </label>
                <label>
