@@ -98,7 +98,7 @@ function App() {
             <br/> 
             <a href ={"https://dscvit.com"} target="_blank" rel="noopener noreferrer">
             <img src={white} alt="" className={darkMode ? "log" : "vanish"}/>
-            <img src={color} alt="" className={darkMode ? "vanish" : "log"}/>
+            <img src={color} alt="" className={darkMode ? "vanish" : "log1"}/>
             </a>
           
     

@@ -547,6 +547,9 @@ color: black;
   width:450px;
   /* padding-left:50px; */
 }
+.log1{
+  width:350px;
+}
 .floater{
   float: right;
 }
@@ -573,6 +576,9 @@ color: black;
   } 
   .log{
     width:320px;
+  }
+  .log1{
+    width:250px;
   }
   .floater{
     float: none;
